@@ -1,6 +1,6 @@
 ﻿/* Frameworks*/
 
-@import "/www/libs/materialize-src/sass/materialize";
+@import "../www/libs/materialize-src/sass/materialize";
 
 /* Base */
 
@@ -53,8 +53,6 @@ html {
   @media only screen and (min-width: $large-screen) {
     font-size: 14px;
   }
-
-  color: $off-white;
 }
 
 footer.page-footer {

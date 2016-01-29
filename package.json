@@ -15,15 +15,18 @@
     "mate"
   ],
   "author": "CHVM",
-  "license": [
-    "MIT",
-    "ISC"
-  ],
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Praytic/memory_mate/issues"
   },
   "homepage": "https://github.com/Praytic/memory_mate#readme",
   "devDependencies": {
-    "gulp": "^3.9.0"
-  }
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1"
+  },
+  "cordovaPlugins": [],
+  "cordovaPlatforms": []
 }
