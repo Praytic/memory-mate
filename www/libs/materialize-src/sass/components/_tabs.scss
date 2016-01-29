@@ -1,9 +1,7 @@
 .tabs {
-  display: flex;
+  @include flexbox();
   position: relative;
-  overflow-x: auto;
-  overflow-y: hidden;
-  height: 48px;
+  height: 56px;
   background-color: $tabs-bg-color;
   margin: 0 auto;
   width: 100%;
@@ -17,8 +15,8 @@
     display: block;
     float: left;
     text-align: center;
-    line-height: 48px;
-    height: 48px;
+    line-height: 56px;
+    height: 56px;
     padding: 0;
     margin: 0;
     text-transform: uppercase;
@@ -35,7 +33,7 @@
       height: 100%;
       text-overflow: ellipsis;
       overflow: hidden;
-      transition: color .28s ease;
+      @include transition( color .28s ease);
       &:hover {
         color: lighten($tabs-text-color, 20%);
       }
@@ -53,4 +51,24 @@
     background-color: $tabs-underline-color;
     will-change: left, right;
   }
+}
+
+.hide-tab-scrollbar {
+  position: relative;
+  height: 48px;
+  overflow: hidden;
+
+  .tabs {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+}
+
+// Hacky way to find scrollbar width or height.
+.scrollbar-measure {
+  width: 100px;
+  height: 100px;
+  overflow: scroll;
+  position: absolute;
+  top: -9999px;
 }

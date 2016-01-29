@@ -5,13 +5,14 @@ var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 
 var paths = {
-    sass: ['./scss/**/*.scss']
+    sass: ['./scss/**/*.scss',
+           './www/libs/materialize-src/sass/**/*.scss']
 };
 
 gulp.task('default', ['sass']);
 
 gulp.task('sass', function(done) {
-    gulp.src('./scss/main.scss')
+    gulp.src(['./scss/main.scss'])
         .pipe(sass())
         .on('error', sass.logError)
         .pipe(gulp.dest('./www/css/'))
