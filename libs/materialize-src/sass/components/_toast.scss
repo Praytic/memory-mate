@@ -8,14 +8,16 @@
     bottom: 0%;
   }
   @media #{$medium-only} {
+    min-width: 30%;
     left: 5%;
+    right: 5%;
     bottom: 7%;
-    max-width: 90%;
   }
   @media #{$large-and-up} {
+    min-width: 8%;
     top: 10%;
     right: 7%;
-    max-width: 86%;
+    left: 7%;
   }
 }
 
@@ -38,9 +40,9 @@
   font-weight: 300;
   color: $toast-text-color;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flexbox();
+  @include align(center);
+  @include justify-content(space-between);
 
   .btn, .btn-flat {
     margin: 0;

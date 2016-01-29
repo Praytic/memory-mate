@@ -44,11 +44,11 @@
   text-align: center;
   letter-spacing: .5px;
   @extend .z-depth-1;
-  transition: .2s ease-out;
+  @include transition(.2s ease-out);
   cursor: pointer;
 
   &:hover {
-    background-color: lighten($button-color, 5%);
+    background-color: lighten($button-color, 15%);
     @extend .z-depth-1-half;
   }
 }
@@ -81,7 +81,6 @@
   }
 
   &:hover {
-    background-color: $button-color;
     @extend .z-depth-1-half;
   }
   &:before {
