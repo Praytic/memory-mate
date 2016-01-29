@@ -1,0 +1,13 @@
+﻿.button-icon {
+  height: $button-height-mobile;
+  line-height: $button-line-height-mobile;
+
+  @media #{$medium-and-up} {
+    height: $button-height;
+    line-height: $button-line-height;
+  }
+}
+
+.btn-floating {
+  background-color: $primary-color;
+}

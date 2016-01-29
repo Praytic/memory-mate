@@ -1,0 +1,29 @@
+{
+  "name": "memory_mate",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Praytic/memory_mate.git"
+  },
+  "keywords": [
+    "memory",
+    "mate"
+  ],
+  "author": "CHVM",
+  "license": [
+    "MIT",
+    "ISC"
+  ],
+  "bugs": {
+    "url": "https://github.com/Praytic/memory_mate/issues"
+  },
+  "homepage": "https://github.com/Praytic/memory_mate#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}

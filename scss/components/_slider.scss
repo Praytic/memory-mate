@@ -1,0 +1,30 @@
+﻿#slider {
+  position: relative;
+  overflow: hidden;
+
+  ul {
+    position: relative;
+    margin: 0;
+
+    li {
+      position: relative;
+      display: block;
+      float: left;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+  
+a {
+  &.control_next,
+  &.control_prev {
+    opacity: 0.8;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+      -webkit-transition: all 0.2s ease;
+    }
+  }
+}

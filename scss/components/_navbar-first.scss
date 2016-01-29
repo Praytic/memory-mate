@@ -1,0 +1,15 @@
+﻿.navbar-first {
+  nav {
+    @extend .z-depth-1;
+  }
+
+  .brand-logo {
+    position: relative;
+    font-size: $navbar-brand-font-size * 0.75;
+
+    @media #{$large-and-up} {
+      left: 7px ;
+      font-size: $navbar-brand-font-size;
+    }
+  }
+}
