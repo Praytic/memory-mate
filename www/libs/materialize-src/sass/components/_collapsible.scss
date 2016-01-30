@@ -3,6 +3,7 @@
   border-right: 1px solid $collapsible-border-color;
   border-left: 1px solid $collapsible-border-color;
   margin: $element-top-margin 0 $element-bottom-margin 0;
+  color: $collapsible-color;
   @extend .z-depth-1;
 }
 

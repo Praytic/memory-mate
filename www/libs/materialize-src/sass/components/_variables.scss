@@ -8,6 +8,7 @@ $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
 $link-color: #fff !default;
 $background-color: color("grey", "darken-4") !default;
+$text-color: #FFF;
 
 /*** Badges ***/
 $badge-bg-color: $secondary-color !default;
@@ -34,8 +35,9 @@ $card-link-color-light: lighten($card-link-color, 20%) !default;
 
 /*** Collapsible ***/
 $collapsible-height: 3rem !default;
-$collapsible-header-color: #fff !default;
-$collapsible-border-color: #ddd !default;
+$collapsible-header-color: lighten($background-color, 15%) !default;
+$collapsible-border-color: transparent !default;
+$collapsible-color: #FFF !default;
 
 /*** Chips ***/
 $chip-bg-color: #e4e4e4 !default;
@@ -162,7 +164,3 @@ $collection-link-color: #fff !default;
 
 /* Progress Bar */
 $progress-bar-color: $secondary-color !default;
-
-/*** Accordion ***/
-$accordion-bg-color: color("grey", "darken-3") !default;
-$accordion-item-color: lighten($secondary-color, 15%) !default;
