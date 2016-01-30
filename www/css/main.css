@@ -1562,7 +1562,7 @@
 .grey.darken-1 {
   background-color: #757575 !important; }
 
-.grey-text.text-darken-1 {
+.grey-text.text-darken-1, span.badge2 {
   color: #757575 !important; }
 
 .grey.darken-2 {
@@ -2331,16 +2331,16 @@ td, th {
 
 .collection {
   margin: 0.5rem 0 1rem 0;
-  border: 1px solid #e0e0e0;
+  border: 1px solid transparent;
   border-radius: 2px;
   overflow: hidden;
   position: relative; }
   .collection .collection-item {
-    background-color: #fff;
+    background-color: #212121;
     line-height: 1.5rem;
     padding: 10px 20px;
     margin: 0;
-    border-bottom: 1px solid #e0e0e0; }
+    border-bottom: 1px solid transparent; }
     .collection .collection-item.avatar {
       min-height: 84px;
       padding-left: 72px;
@@ -2383,10 +2383,10 @@ td, th {
     transition: 0.5s;
     color: #fff; }
     .collection a.collection-item:not(.active):hover {
-      background-color: #546e7a; }
+      background-color: #3b3b3b; }
   .collection.with-header .collection-header {
-    background-color: #fff;
-    border-bottom: 1px solid #e0e0e0;
+    background-color: #212121;
+    border-bottom: 1px solid transparent;
     padding: 10px 20px; }
   .collection.with-header .collection-item {
     padding-left: 30px; }
@@ -2421,6 +2421,16 @@ span.badge {
     border-radius: 2px; }
   span.badge.new:after {
     content: " new"; }
+
+span.badge2 {
+  min-width: 3rem;
+  padding: 0 6px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 nav ul a span.badge {
   position: static;
@@ -6365,15 +6375,15 @@ a.waves-effect .waves-ripple {
 .collapsible-header {
   display: block;
   cursor: pointer;
-  min-height: 3rem;
-  line-height: 3rem;
-  padding: 0 1rem;
+  min-height: 2rem;
+  line-height: 2rem;
+  padding: 0.5rem 1rem;
   background-color: #474747;
   border-bottom: 1px solid transparent; }
   .collapsible-header i {
     width: 2rem;
     font-size: 1.6rem;
-    line-height: 3rem;
+    line-height: 2rem;
     display: block;
     float: left;
     text-align: center;

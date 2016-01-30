@@ -2,12 +2,12 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8">
-    <title>home-page</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/main.css" media="screen,projection" />
+  <meta charset="utf-8">
+  <title>home-page</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/main.css" media="screen,projection" />
 </head>
 <body>
 
@@ -16,27 +16,33 @@
     <nav>
       <div class="row">
         <ul>
-            <li><a href="#" class="button-icon hide-on-large-only"><i class="material-icons">menu</i></a></li>
+          <li><a href="#" class="button-icon hide-on-large-only"><i class="material-icons">menu</i></a></li>
         </ul>
         <span class="brand-logo left truncate">Memory Mate</span>
         <ul class="right hide-on-med-and-down">
-            <li><a href="search.html" class="btn-flat">Search</a></li>
-            <li><a href="settings.html" class="btn-flat">Settings</a></li>
+          <li class="right hide-on-small-only"><a href="home.html" class="btn-flat">Home</a></li>
+          <li class="right hide-on-small-only"><a href="browse.html" class="btn-flat">Browse</a></li>
+          <li class="right hide-on-small-only"><a href="profile.html" class="btn-flat">Profile</a></li>
+          <li><a href="search.html" class="btn-flat">Search</a></li>
+          <li><a href="settings.html" class="btn-flat">Settings</a></li>
         </ul>
         <ul class="right row hide-on-large-only">
-            <li><a href="search.html" class="button-icon"><i class="material-icons">search</i></a></li>
-            <li><a href="settings.html" class="button-icon"><i class="material-icons">more_vert</i></a></li>
+          <li class="hide-on-small-and-down"><a href="home.html" class="button-icon"><i class="material-icons">home</i></a></li>
+          <li class="hide-on-small-and-down"><a href="browse.html" class="button-icon"><i class="material-icons">language</i></a></li>
+          <li class="hide-on-small-and-down"><a href="profile.html" class="button-icon"><i class="material-icons">person</i></a></li>
+          <li><a href="search.html" class="button-icon"><i class="material-icons">search</i></a></li>
+          <li><a href="settings.html" class="button-icon"><i class="material-icons">more_vert</i></a></li>
         </ul>
       </div>
     </nav>
   </div>
-  <div class="navbar-fixed">
+  <div class="navbar-fixed hide-on-med-and-up">
     <nav>
       <div class="row">
         <ul class="tabs">
-          <li class="tab col s4"><a class="active" href="home.html">HOME</a></li>
-          <li class="tab col s4"><a href="browse.html">BROWSE</a></li>
-          <li class="tab col s4"><a href="profile.html">PROFILE</a></li>
+          <li class="tab col s4"><a href="#home" class="btn-flat active">Home</a></li>
+          <li class="tab col s4"><a href="#browse" class="btn-flat">Browse</a></li>
+          <li class="tab col s4"><a href="#profile" class="btn-flat">Profile</a></li>
         </ul>
       </div>
     </nav>
@@ -44,31 +50,68 @@
 </header>
 
 <main>
-  <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-    <a href="deck/editor.html" class="waves-effect waves-light waves-ripple btn-floating btn-large">
-      <i class="large material-icons">add</i>
-    </a>
+  <div id="home" class="container">
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+      <a href="deck/deck.html" class="waves-effect waves-light waves-ripple btn-floating btn-large">
+        <i class="large material-icons">add</i>
+      </a>
+    </div>
+    <div>
+      </br>
+      <ul class="collapsible popout" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header">
+            </a><span class="badge new">5</span>First Theme
+          </div>
+          <div class="collapsible-body">
+            <div class="collection">
+              <a href="deck/deck.html" class="collection-item">First Deck in First Theme</a>
+              <a href="deck/deck.html" class="collection-item">Second Deck in First Theme</a>
+              <a href="deck/deck.html" class="collection-item"><span class="badge new">5</span>Third Deck in First Theme</a>
+            </div>
+          </div>
+        </li>
+        <li>
+
+          <div class="collapsible-header">
+            <span>Second Theme</span>
+          </div>
+          <div class="collapsible-body">
+            <div class="collection">
+              <a href="deck/deck.html" class="collection-item">First Deck in Second Theme</a>
+              <a href="deck/deck.html" class="collection-item">Second Deck in Second Theme</a>
+              <a href="deck/deck.html" class="collection-item">Third Deck in Second Theme</a>
+            </div>
+          </div>
+        </li>
+        <li>
+
+          <div class="collapsible-header">
+            <span>Third Theme</span><span class="new badge">43</span>
+          </div>
+          <div class="collapsible-body">
+            <div class="collection">
+              <a href="deck/deck.html" class="collection-item"><span class="badge new">10</span>First Deck in Third Theme</a>
+              <a href="deck/deck.html" class="collection-item"><span class="badge new">33</span>Second Deck in Third Theme</a>
+              <a href="deck/deck.html" class="collection-item">Third Deck in Third Theme</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
-  <div class="container">
-    <h4>My Themes</h4>
-    <ul class="collapsible" data-collapsible="accordion">
-      <li>
-        <div class="collapsible-header"><i class="material-icons">filter_drama</i>First Section</div>
-        <div class="collapsible-body"><p>This is first section.</p></div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons">place</i>Second Section</div>
-        <div class="collapsible-body"><p>This is second section.</p></div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons">whatshot</i>Third Section</div>
-        <div class="collapsible-body"><p>This is third section.</p></div>
-      </li>
-    </ul>
+  <div id="browse" class="container">
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+      <a href="deck/publication.html" class="waves-effect waves-light waves-ripple btn-floating btn-large">
+        <i class="large material-icons">add</i>
+      </a>
+    </div>
+  </div>
+  <div id="profile" class="container">
   </div>
 </main>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="../libs/materialize-src/js/bin/materialize.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../libs/materialize-src/js/bin/materialize.js"></script>
 </body>
 </html>
