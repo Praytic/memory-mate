@@ -34,7 +34,7 @@ $card-link-color: color("orange", "accent-2") !default;
 $card-link-color-light: lighten($card-link-color, 20%) !default;
 
 /*** Collapsible ***/
-$collapsible-height: 3rem !default;
+$collapsible-height: 2rem !default;
 $collapsible-header-color: lighten($background-color, 15%) !default;
 $collapsible-border-color: transparent !default;
 $collapsible-color: #FFF !default;
@@ -155,12 +155,12 @@ $intervals: 20 !default;
 $interval-size: $range / $intervals !default;
 
 /*** Collections ***/
-$collection-border-color: #e0e0e0 !default;
-$collection-bg-color: #fff !default;
+$collection-border-color: transparent !default;
+$collection-bg-color: $background-color !default;
 $collection-active-bg-color: $secondary-color !default;
 $collection-active-color: lighten($secondary-color, 55%) !default;
-$collection-hover-bg-color: $secondary-color !default;
-$collection-link-color: #fff !default;
+$collection-hover-bg-color: lighten($collection-bg-color, 10%) !default;
+$сollection-link-color: #fff !default;
 
 /* Progress Bar */
 $progress-bar-color: $secondary-color !default;
