@@ -4,6 +4,7 @@
 
 /* Components */
 
+@import "components/global";
 @import "components/slider";
 @import "components/accordion";
 @import "components/accordion-large";
@@ -11,45 +12,3 @@
 @import "components/navbar-second";
 @import "components/buttons";
 @import "components/mcard";
-
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  background-color: $background-color;
-}
-
-nav {
-  box-shadow: none;
-  .brand-logo {
-    position: relative;
-  }
-}
-
-main {
-  flex: 1 0 auto;
-}
-
-footer {
-  height: $navbar-height-mobile;
-  z-index: 999;
-
-  @media #{$medium-and-up} {
-    height: $navbar-height;
-  }
-}
-
-html {
-  @media only screen and (min-width: $medium-screen) {
-    font-size: 14px;
-  }
-
-  @media only screen and (min-width: $large-screen) {
-    font-size: 14px;
-  }
-}
-
-footer.page-footer {
-  padding-top: 0;
-  margin-top: 0;
-}

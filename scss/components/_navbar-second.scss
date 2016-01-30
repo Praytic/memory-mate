@@ -5,7 +5,7 @@
 
   nav {
     position: fixed;
-    @extend .z-depth-1-half;
+    @extend .z-depth-1;
   }
 
   @media #{$medium-and-up} {

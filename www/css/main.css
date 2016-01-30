@@ -2040,11 +2040,8 @@ ul {
 .z-depth-0 {
   box-shadow: none !important; }
 
-.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav, .accordion, .navbar-first nav {
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav, .accordion, .navbar-first nav, .navbar-second nav {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
-
-.z-depth-1-half, .btn:hover, .btn-large:hover, .btn-floating:hover, .navbar-second nav {
-  box-shadow: 0 8px 11px 0 rgba(0, 0, 0, 0.18), 0 7px 15px 0 rgba(0, 0, 0, 0.15); }
 
 .z-depth-2, .accordion-items.active {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
@@ -8646,6 +8643,39 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     margin-bottom: 5em; } }
 
 /* Components */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #212121; }
+
+nav {
+  box-shadow: none; }
+  nav .brand-logo {
+    position: relative; }
+
+main {
+  flex: 1 0 auto; }
+
+footer {
+  height: 56px;
+  z-index: 999; }
+  @media only screen and (min-width: 601px) {
+    footer {
+      height: 64px; } }
+
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 14px; } }
+
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 14px; } }
+
+footer.page-footer {
+  padding-top: 0;
+  margin-top: 0; }
+
 #slider {
   position: relative;
   overflow: hidden; }
@@ -8834,36 +8864,3 @@ a.control_next, a.control_prev {
   .mcard .down-side {
     position: relative;
     height: 50%; }
-
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  background-color: #212121; }
-
-nav {
-  box-shadow: none; }
-  nav .brand-logo {
-    position: relative; }
-
-main {
-  flex: 1 0 auto; }
-
-footer {
-  height: 56px;
-  z-index: 999; }
-  @media only screen and (min-width: 601px) {
-    footer {
-      height: 64px; } }
-
-@media only screen and (min-width: 992px) {
-  html {
-    font-size: 14px; } }
-
-@media only screen and (min-width: 1200px) {
-  html {
-    font-size: 14px; } }
-
-footer.page-footer {
-  padding-top: 0;
-  margin-top: 0; }
