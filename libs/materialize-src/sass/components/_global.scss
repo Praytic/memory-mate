@@ -744,7 +744,7 @@ nav ul a span.badge {
   display: block;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: clip;
 }
 
 .no-padding {

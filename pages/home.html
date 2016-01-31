@@ -15,36 +15,61 @@
   <div class="navbar-fixed">
     <nav>
       <div class="row">
-        <ul>
-          <li><a href="#" class="button-icon hide-on-large-only"><i class="material-icons">menu</i></a></li>
-        </ul>
-        <span class="brand-logo left truncate">Memory Mate</span>
-        <ul class="right hide-on-med-and-down">
-          <li class="right hide-on-small-only"><a href="home.html" class="btn-flat">Home</a></li>
-          <li class="right hide-on-small-only"><a href="browse.html" class="btn-flat">Browse</a></li>
-          <li class="right hide-on-small-only"><a href="profile.html" class="btn-flat">Profile</a></li>
-          <li><a href="search.html" class="btn-flat">Search</a></li>
-          <li><a href="settings.html" class="btn-flat">Settings</a></li>
-        </ul>
-        <ul class="right row hide-on-large-only">
-          <li class="hide-on-small-and-down"><a href="home.html" class="button-icon"><i class="material-icons">home</i></a></li>
-          <li class="hide-on-small-and-down"><a href="browse.html" class="button-icon"><i class="material-icons">language</i></a></li>
-          <li class="hide-on-small-and-down"><a href="profile.html" class="button-icon"><i class="material-icons">person</i></a></li>
-          <li><a href="search.html" class="button-icon"><i class="material-icons">search</i></a></li>
-          <li><a href="settings.html" class="button-icon"><i class="material-icons">more_vert</i></a></li>
-        </ul>
+        <div class="hide-on-med-only hide-on-large-only">
+          <div class="col s8">
+            <ul>
+            <li><a href="#" class="button-icon hide-on-large-only"><i class="material-icons">menu</i></a></li>
+              <li><span class="brand-logo left truncate">Memory Mate</span></li>
+            </ul>
+          </div>
+          <div class="col s4 right">
+            <ul class="icons right">
+              <li><a href="search.html" class="button-icon"><i class="material-icons">search</i></a></li>
+              <li><a href="settings.html" class="button-icon"><i class="material-icons">more_vert</i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="hide-on-small-only hide-on-large-only">
+          <div class="col s5">
+            <ul>
+              <li><a href="#" class="button-icon hide-on-large-only"><i class="material-icons">menu</i></a></li>
+              <li><span class="brand-logo left truncate">Memory Mate</span></li>
+            </ul>
+          </div>
+          <div class="col s7 right">
+            <ul class="icons right">
+              <li class="icon"><a href="#home" class="button-icon active"><i class="material-icons">home</i></a></li>
+              <li class="icon"><a href="#browse" class="button-icon"><i class="material-icons">language</i></a></li>
+              <li class="icon"><a href="#profile" class="button-icon"><i class="material-icons">person</i></a></li>
+              <li><a href="search.html" class="button-icon"><i class="material-icons">search</i></a></li>
+              <li><a href="settings.html" class="button-icon"><i class="material-icons">more_vert</i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="hide-on-small-only hide-on-med-only">
+          <div class="col s4">
+            <span class="brand-logo left truncate">Memory Mate</span>
+          </div>
+          <div class="col s8 right hide-on-med-and-down" style="height: 100%">
+            <ul class="tabs right">
+              <li class="tab"><a href="#home" class="btn-flat">Home</a></li>
+              <li class="tab"><a href="#browse" class="btn-flat">Browse</a></li>
+              <li class="tab"><a href="#profile" class="btn-flat">Profile</a></li>
+              <li class="tab"><a href="#search" class="btn-flat">Search</a></li>
+              <li class="tab"><a href="#settings" class="btn-flat">Settings</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </nav>
   </div>
-  <div class="navbar-fixed hide-on-med-and-up">
+  <div id="second-nav" class="navbar-fixed hide-on-med-and-up">
     <nav>
-      <div class="row">
         <ul class="tabs">
           <li class="tab col s4"><a href="#home" class="btn-flat active">Home</a></li>
           <li class="tab col s4"><a href="#browse" class="btn-flat">Browse</a></li>
           <li class="tab col s4"><a href="#profile" class="btn-flat">Profile</a></li>
         </ul>
-      </div>
     </nav>
   </div>
 </header>
@@ -101,6 +126,7 @@
     </div>
   </div>
   <div id="browse" class="container">
+    Browse
     <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
       <a href="deck/publication.html" class="waves-effect waves-light waves-ripple btn-floating btn-large">
         <i class="large material-icons">add</i>
@@ -108,10 +134,18 @@
     </div>
   </div>
   <div id="profile" class="container">
+    Profile
+  </div>
+  <div id="settings" class="container">
+    Settings
+  </div>
+  <div id="search" class="container">
+    Search
   </div>
 </main>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="../libs/materialize-src/js/bin/materialize.js"></script>
+<script type="text/javascript" src="../js/components/icons.js"></script>
 </body>
 </html>

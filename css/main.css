@@ -2038,7 +2038,7 @@ ul {
 .z-depth-0 {
   box-shadow: none !important; }
 
-.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav, .navbar-first nav, .navbar-second nav {
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
 .z-depth-2 {
@@ -2330,7 +2330,7 @@ td, th {
       border-right: 1px solid #d0d0d0; } }
 
 .collection {
-  margin: 0.5rem 0 1rem 0;
+  margin: 0 0 0 0;
   border: 1px solid transparent;
   border-radius: 2px;
   overflow: hidden;
@@ -2456,7 +2456,7 @@ nav ul a span.badge {
   width: 100%;
   background-color: #c4d0d6;
   border-radius: 2px;
-  margin: 0.5rem 0 1rem 0;
+  margin: 0 0 0 0;
   overflow: hidden; }
   .progress .determinate {
     position: absolute;
@@ -2611,7 +2611,7 @@ nav ul a span.badge {
   display: block;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; }
+  text-overflow: clip; }
 
 .no-padding {
   padding: 0 !important; }
@@ -5107,8 +5107,8 @@ nav ul a span.badge {
     width: 70%; } }
 
 .container .row {
-  margin-left: -0.75rem;
-  margin-right: -0.75rem; }
+  margin-left: 0;
+  margin-right: 0; }
 
 .section {
   padding-top: 1rem;
@@ -5132,7 +5132,7 @@ nav ul a span.badge {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0 0.75rem; }
+    padding: 0 0; }
     .row .col[class*="push-"], .row .col[class*="pull-"] {
       position: relative; }
     .row .col.s1 {
@@ -5492,7 +5492,7 @@ nav {
     position: absolute;
     color: #fff;
     display: inline-block;
-    font-size: 2.1rem;
+    font-size: 1.6rem;
     padding: 0;
     white-space: nowrap; }
     nav .brand-logo.center {
@@ -5759,13 +5759,13 @@ small {
 .card-panel {
   transition: box-shadow .25s;
   padding: 20px;
-  margin: 0.5rem 0 1rem 0;
+  margin: 0 0 0 0;
   border-radius: 2px;
   background-color: #424242; }
 
 .card {
   position: relative;
-  margin: 0.5rem 0 1rem 0;
+  margin: 0 0 0 0;
   background-color: #424242;
   transition: box-shadow .25s;
   border-radius: 2px; }
@@ -5920,10 +5920,10 @@ small {
   display: -webkit-flex;
   display: flex;
   position: relative;
-  height: 56px;
   background-color: #ffc107;
   margin: 0 auto;
   width: 100%;
+  height: 100%;
   white-space: nowrap; }
   .tabs .tab {
     -webkit-box-flex: 1;
@@ -5933,8 +5933,7 @@ small {
     display: block;
     float: left;
     text-align: center;
-    line-height: 56px;
-    height: 56px;
+    line-height: inherit;
     padding: 0;
     margin: 0;
     text-transform: uppercase;
@@ -5948,7 +5947,6 @@ small {
       display: block;
       width: 100%;
       height: 100%;
-      text-overflow: ellipsis;
       overflow: hidden;
       -webkit-transition: color 0.28s ease;
       -moz-transition: color 0.28s ease;
@@ -6369,7 +6367,7 @@ a.waves-effect .waves-ripple {
   border-top: 1px solid transparent;
   border-right: 1px solid transparent;
   border-left: 1px solid transparent;
-  margin: 0.5rem 0 1rem 0;
+  margin: 0 0 0 0;
   color: #FFF; }
 
 .collapsible-header {
@@ -6740,7 +6738,7 @@ textarea.materialize-textarea {
     color: #9e9e9e;
     position: absolute;
     top: 0.8rem;
-    left: 0.75rem;
+    left: 0;
     font-size: 1rem;
     cursor: text;
     -webkit-transition: 0.2s ease-out;
@@ -8705,24 +8703,6 @@ a.control_next, a.control_prev {
     opacity: 1;
     -webkit-transition: all 0.2s ease; }
 
-.navbar-first .brand-logo {
-  position: relative;
-  font-size: 1.575rem; }
-  @media only screen and (min-width: 993px) {
-    .navbar-first .brand-logo {
-      left: 7px;
-      font-size: 2.1rem; } }
-
-.navbar-second {
-  position: relative;
-  height: 56px;
-  z-index: 999; }
-  .navbar-second nav {
-    position: fixed; }
-  @media only screen and (min-width: 601px) {
-    .navbar-second {
-      height: 64px; } }
-
 .button-icon {
   height: 56px;
   line-height: 56px; }
@@ -8730,9 +8710,6 @@ a.control_next, a.control_prev {
     .button-icon {
       height: 64px;
       line-height: 64px; } }
-
-.btn-floating {
-  background-color: #ffc107; }
 
 .mcard {
   height: 100%; }

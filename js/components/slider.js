@@ -1,13 +1,10 @@
 ﻿jQuery(document).ready(function ($) {
-  
+
   var slideCount = $('#slider > ul > li').length,
 	    slideWidth = $('#slider > ul > li').width(),
       slideHeight = $('main').height(),
 	    sliderUlWidth = $('#slider ul').width() * slideCount,
-      // For paginator only
-      currentPaginator = $('ul.pagination#controller li').index($('li.active')) + 1,
-      // For tabs only
-      currentTab = $('ul.tabs#controller li').index($('li.active')) + 1;
+      currentPaginator = $('ul.pagination#controller li').index($('li.active')) + 1;
 
   $('#slider > ul').css({ width: sliderUlWidth, height: slideHeight, marginLeft: -slideWidth });
 
@@ -83,7 +80,7 @@
     });
   };
 
-  $('a').click(function () {
+  $('ul.pagination > li > a').click(function () {
     console.log('New page: ');
     var newPageNumber,
         diffPages;
@@ -119,4 +116,4 @@
     moveRight(1);
   });
 
-});    
+});
