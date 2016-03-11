@@ -327,6 +327,10 @@ footer.page-footer {
     color: rgba(255,255,255,.8);
     background-color: rgba(51,51,51,.08);
     @extend .light;
+    @media #{$medium-and-up} {
+      height: $footer-height;
+      line-height: $footer-height;
+    }
   }
 }
 

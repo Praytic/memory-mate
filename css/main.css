@@ -1639,7 +1639,8 @@
 /*** Toasts ***/
 /*** Typography ***/
 /*** Collections ***/
-/* Progress Bar */
+/*** Progress Bar ***/
+/*** Modal ***/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -2239,6 +2240,10 @@ footer.page-footer {
     line-height: 56px;
     color: rgba(255, 255, 255, 0.8);
     background-color: rgba(51, 51, 51, 0.08); }
+    @media only screen and (min-width: 601px) {
+      footer.page-footer .footer-copyright {
+        height: 64px;
+        line-height: 64px; } }
 
 table, th, td {
   border: none; }
@@ -6300,7 +6305,7 @@ a.waves-effect .waves-ripple {
   position: fixed;
   left: 0;
   right: 0;
-  background-color: #fafafa;
+  background-color: #6e6e6e;
   padding: 0;
   max-height: 70%;
   width: 55%;
@@ -6319,7 +6324,7 @@ a.waves-effect .waves-ripple {
     cursor: pointer; }
   .modal .modal-footer {
     border-radius: 0 0 2px 2px;
-    background-color: #fafafa;
+    background-color: #6e6e6e;
     padding: 4px 6px;
     height: 56px;
     width: 100%; }

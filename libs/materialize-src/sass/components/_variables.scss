@@ -164,5 +164,9 @@ $collection-active-color: lighten($secondary-color, 55%) !default;
 $collection-hover-bg-color: lighten($collection-bg-color, 10%) !default;
 $collection-link-color: #fff !default;
 
-/* Progress Bar */
+/*** Progress Bar ***/
 $progress-bar-color: $secondary-color !default;
+
+/*** Modal ***/
+$modal-bg-color: lighten($background-color, 30%);
+$modal-footer-bg-color: lighten($background-color, 30%);

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Log In</title>
+  <meta http-equiv="Content-Type"
+        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <link rel="stylesheet" type="text/css" href="../css/main.css" media="screen,projection"/>
+</head>
+
+<body>
+<main class="valign-wrapper row" style="margin: 20px auto">
+
+  <!-- Log In Form -->
+  <form class="card">
+    <div class="card-content">
+      <div class="row" style="min-width: 20rem">
+        <span class="card-title center"><h4>Memory Mate</h4></span>
+      </div>
+      <div class="row">
+        <div class="input-field">
+          <input id="email" type="text" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field">
+          <input id="pass" type="password" class="validate">
+          <label for="pass">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field">
+          <p>
+            <input id="remember" type="checkbox" class="filled-in">
+            <label for="remember">Remember me</label>
+          </p>
+        </div>
+      </div>
+      <div class="row" style="padding: 20px">
+        <div class="input-field">
+          <a href="home.html" class="btn waves-effect waves-light col s12">Log in</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s5">
+          <p class="left-align">
+            <a href="authorization/sign-up.html" class="btn-flat">Sign up</a>
+          </p>
+        </div>
+        <div class="col s7">
+          <p class="right-align">
+            <a id="forgot-pass-btn" href="#forgot-pass-modal" class="btn-flat">Restore pass</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <!-- Modal Forgot-Password Window -->
+  <div id="forgot-pass-modal" class="modal">
+    <div class="modal-content">
+      <h4>Restore password</h4>
+      <p>Write you registered email to restore the password</p>
+      <div class="row">
+        <div class="input-field">
+          <input id="email-restore" type="text" class="validate">
+          <label for="email-restore">Email</label>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer row">
+      <a id="cancel" href="#!" class="modal-action modal-close waves-effect btn-flat ">Cancel</a>
+      <a id="apply" href="#!" class="modal-action modal-close waves-effect btn-flat ">Apply</a>
+    </div>
+  </div>
+</main>
+
+<footer class="page-footer transparent hide">
+  <div class="footer-copyright grey darken-3">
+    <div class="container">
+      © 2015 Copyright Text
+      <a href="#" class="custom-text text-lighten-3 right">Link</a>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../libs/materialize-src/js/bin/materialize.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+</body>
+</html>
