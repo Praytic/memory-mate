@@ -2403,11 +2403,13 @@ if ($) {
 
       if (options.dismissible) {
         $overlay.click(function () {
-          $modal.closeModal(options);
+          if (!$modal.hasAttribute('fix')) {
+            $modal.closeModal(options);
+          }
         });
         // Return on ESC
         $(document).on('keyup.leanModal' + overlayID, function (e) {
-          if (e.keyCode === 27) {   // ESC key
+          if (e.keyCode === 27 && !$modal.hasAttribute('fix')) {   // ESC key
             $modal.closeModal(options);
           }
         });

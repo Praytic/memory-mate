@@ -17,28 +17,28 @@
 <main class="valign-wrapper row" style="margin: 20px auto">
 
   <!-- Log In Form -->
-  <form class="card">
-    <div class="card-content">
+  <form id="login" class="modal card fix">
+    <div class="card-content modal-content">
       <div class="row" style="min-width: 20rem">
         <span class="card-title center"><h4>Memory Mate</h4></span>
       </div>
       <div class="row">
         <div class="input-field">
-          <input id="email" type="text" class="validate">
-          <label for="email">Email</label>
+          <input id="login-email" type="text" class="validate">
+          <label for="login-email">Email</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field">
-          <input id="pass" type="password" class="validate">
-          <label for="pass">Password</label>
+          <input id="login-pass" type="password" class="validate">
+          <label for="login-pass">Password</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field">
           <p>
-            <input id="remember" type="checkbox" class="filled-in">
-            <label for="remember">Remember me</label>
+            <input id="login-remember" type="checkbox" class="filled-in">
+            <label for="login-remember">Remember me</label>
           </p>
         </div>
       </div>
@@ -50,20 +50,52 @@
       <div class="row">
         <div class="col s5">
           <p class="left-align">
-            <a href="authorization/sign-up.html" class="btn-flat">Sign up</a>
+            <a id="sign-up-btn" href="#signup" class="btn-flat modal-trigger">Sign up</a>
           </p>
         </div>
         <div class="col s7">
           <p class="right-align">
-            <a id="forgot-pass-btn" href="#forgot-pass-modal" class="btn-flat">Restore pass</a>
+            <a id="forgot-pass-btn" href="#forgot-pass" class="btn-flat modal-trigger">Restore pass</a>
           </p>
         </div>
       </div>
     </div>
   </form>
 
+  <!-- Sign Up Form -->
+  <form id="signup" class="modal card fix">
+    <div class="card-content modal-content">
+      <div class="row" style="min-width: 20rem">
+        <span class="card-title center"><h4>Memory Mate</h4></span>
+      </div>
+      <div class="row">
+        <div class="input-field">
+          <input id="signup-name" type="text" class="validate">
+          <label for="signup-name">Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field">
+          <input id="signup-email" type="text" class="validate">
+          <label for="signup-email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field">
+          <input id="signup-pass" type="password" class="validate">
+          <label for="signup-pass">Password</label>
+        </div>
+      </div>
+      <div class="row" style="padding: 20px">
+        <div class="input-field">
+          <a id="signup-btn" href="#login" class="btn waves-effect modal-trigger col s12">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </form>
+
   <!-- Modal Forgot-Password Window -->
-  <div id="forgot-pass-modal" class="modal">
+  <div id="forgot-pass" class="modal">
     <div class="modal-content">
       <h4>Restore password</h4>
       <p>Write you registered email to restore the password</p>
@@ -75,14 +107,15 @@
       </div>
     </div>
     <div class="modal-footer row">
-      <a id="cancel" href="#!" class="modal-action modal-close waves-effect btn-flat ">Cancel</a>
-      <a id="apply" href="#!" class="modal-action modal-close waves-effect btn-flat ">Apply</a>
+      <a id="cancel" href="#login" class="modal-action waves-effect btn-flat modal-trigger">Cancel</a>
+      <a id="apply" href="#login" class="modal-action waves-effect btn-flat modal-trigger">Apply</a>
     </div>
   </div>
+
 </main>
 
-<footer class="page-footer transparent hide">
-  <div class="footer-copyright grey darken-3">
+<footer class="page-footer hide">
+  <div class="footer-copyright">
     <div class="container">
       © 2015 Copyright Text
       <a href="#" class="custom-text text-lighten-3 right">Link</a>
