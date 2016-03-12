@@ -36,7 +36,9 @@
 
       if (options.dismissible) {
         $overlay.click(function() {
-          $modal.closeModal(options);
+          if (!$modal.hasAttribute('fix')) {
+            $modal.closeModal(options);
+          }
         });
         // Return on ESC
         $(document).on('keyup.leanModal' + overlayID, function(e) {

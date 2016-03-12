@@ -9,12 +9,6 @@ var app = {
   // 'load', 'deviceready', 'offline', and 'online'.
   bindEvents: function () {
     document.addEventListener('deviceready', this.onDeviceReady, false);
-    document.getElementById('forgot-pass-btn').addEventListener('click', function () {
-      $('#forgot-pass-modal').openModal();
-    });
-    document.getElementById('apply').addEventListener('click', function () {
-      // Do something!
-    });
   },
   // deviceready Event Handler
   //
@@ -36,4 +30,31 @@ var app = {
   }
 };
 
+var modals = {
+
+  initialize: function () {
+    const $loginModal = $('#login');
+    $loginModal.openModal();
+    $loginModal.addClass('active');
+    this.bindModalListneres();
+  },
+
+  bindModalListneres: function() {
+    var $modalTriggers = document.getElementsByClassName('modal-trigger');
+    for (var i = 0; i < $modalTriggers.length; i++) {
+      const $modalTrigger = $modalTriggers[i];
+      $modalTrigger.addEventListener('click', function () {
+        const hrefTest = this.hash;
+        const $openModal = $(hrefTest),
+          $closeModal = $('.modal.active');
+        $closeModal.closeModal();
+        $closeModal.removeClass('active');
+        $openModal.openModal();
+        $openModal.addClass('active');
+      }, false);
+    }
+  }
+};
+
 app.initialize();
+modals.initialize();
