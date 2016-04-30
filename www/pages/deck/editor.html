@@ -9,13 +9,15 @@
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../../css/main.css" media="screen,projection" />
 </head>
-<body id="pagination, with-menu">
+<body id="pagination" class="with-menu">
 
 <header>
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper">
           <ul id="nav-mobile">
+            <li><a href="#" class="button-icon hide-on-large-only right-menu" data-activates="slide-out"><i
+              class="material-icons">menu</i></a></li>
             <li><a href="deck.html"><i class="material-icons">keyboard_arrow_left</i></a></li>
             <span class="brand-logo left truncate">Deck Name</span>
             <li class="right"><a href="../settings.html" class="button-icon"><i class="material-icons">more_vert</i></a></li>
@@ -82,14 +84,12 @@
       next_content: '>',
       last_content: '>>'});
 
+    $('.right-menu').sideNav({
+        edge: 'left',
+        closeOnClick: true
+      }
+    );
   })(jQuery);
-</script>
-<script>
-  $('.right-menu').sideNav({
-      edge: 'left',
-      closeOnClick: true
-    }
-  );
 </script>
 </body>
 </html>
