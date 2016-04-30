@@ -1,0 +1,35 @@
+.simple-pagination-page-numbers,
+.simple-pagination-previous,
+.simple-pagination-next,
+.simple-pagination-first,
+.simple-pagination-last {
+  a {
+    display: inline-block;
+    float: left;
+    width: 2rem;
+    text-align: center;
+
+    font-weight: 300;
+    color: $text-color;
+    border-radius: 2px;
+    margin: 0 10px;
+  }
+}
+
+.simple-pagination-previous a {
+  margin-right: 40px;
+}
+
+a[class*="simple-pagination-navigation-disabled"] {
+  color: darken($paginator-color, 50%);
+  cursor: default;
+
+  &.simple-pagination-navigation-page {
+    color: $background-color;
+    background-color: $paginator-current-number;
+    border-radius: 2px;
+  }
+}
+
+
+

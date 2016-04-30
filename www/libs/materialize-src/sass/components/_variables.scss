@@ -170,3 +170,7 @@ $progress-bar-color: $secondary-color !default;
 /*** Modal ***/
 $modal-bg-color: lighten($background-color, 15%);
 $modal-footer-bg-color: lighten($background-color, 15%);
+
+/*** Paginator ***/
+$paginator-color: #fff !default;
+$paginator-current-number: $primary-color-light

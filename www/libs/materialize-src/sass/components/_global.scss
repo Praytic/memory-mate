@@ -588,16 +588,6 @@ span.badge {
   }
 }
 
-span.badge2 {
-  min-width: 3rem;
-  padding: 0 6px;
-  text-align: center;
-  font-size: 1rem;
-  line-height: inherit;
-  @extend .grey-text.text-darken-1;
-  @include box-sizing(border-box);
-}
-
 nav ul a span.badge {
   position: static;
   margin-left: 4px;
