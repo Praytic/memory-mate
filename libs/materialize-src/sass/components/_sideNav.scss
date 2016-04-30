@@ -11,6 +11,8 @@
   background-color: $sidenav-bg-color;
   z-index: 999;
   overflow-y: auto;
+  color: $sidenav-color;
+  padding-left: 15px;
 
   @extend .z-depth-1;
   will-change: left;
@@ -22,15 +24,44 @@
     left: auto;
   }
 
-  .collapsible{
-    margin: 0;
+  .collapsible {
+    margin-left: -15px;
+    .collapsible-header {
+      margin: 0;
+    }
   }
 
+  .collection {
+    background-color: darken($sidenav-bg-color, 10%);
+
+    .collection-item {
+      height: auto;
+      max-width: 260px;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-right: 60px;
+
+      &:not(.active) {
+        &:hover {
+          margin-right: -60px;
+          span.badge {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s 0.2s, opacity 0.2s linear;
+          }
+          background-color: lighten($sidenav-bg-color, 10%);
+        }
+      }
+    }
+  }
 
   li {
     float: none;
-    padding: 0 $sidenav-padding-right;
-    &:hover, &.active { background-color: #ddd; }
+    &:hover, &.active {
+      margin-left: -15px;
+      padding-left: 15px;
+      background-color: lighten($sidenav-bg-color, 10%);
+    }
   }
   a {
     color: $sidenav-color;
@@ -38,7 +69,6 @@
     font-size: 1rem;
     height: 64px;
     line-height: 64px;
-    padding: 0 $sidenav-padding-right;
   }
 }
 
@@ -57,8 +87,7 @@
 .side-nav.fixed {
   a {
     display: block;
-    padding: 0 $sidenav-padding-right;
-    color: #444;
+    color: $sidenav-color;
   }
 }
 
