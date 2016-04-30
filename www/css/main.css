@@ -2343,7 +2343,6 @@ td, th {
   overflow: hidden;
   position: relative; }
   .collection .collection-item {
-    background-color: #212121;
     line-height: 1.5rem;
     padding: 10px 20px;
     margin: 0;
@@ -6366,8 +6365,7 @@ a.waves-effect .waves-ripple {
   border-top: 1px solid transparent;
   border-right: 1px solid transparent;
   border-left: 1px solid transparent;
-  margin: 0 0 0 0;
-  color: #FFF; }
+  margin: 0 0 0 0; }
 
 .collapsible-header {
   display: block;
@@ -6413,7 +6411,7 @@ a.waves-effect .waves-ripple {
 
 .side-nav .collapsible-body {
   border: 0;
-  background-color: #474747; }
+  background-color: #ededed; }
   .side-nav .collapsible-body li a {
     margin: 0 1rem 0 2rem; }
 
@@ -7489,25 +7487,44 @@ select {
   background-color: #ededed;
   z-index: 999;
   overflow-y: auto;
+  color: #444;
+  padding-left: 15px;
   will-change: left; }
   .side-nav.right-aligned {
     will-change: right;
     right: -105%;
     left: auto; }
   .side-nav .collapsible {
-    margin: 0; }
+    margin-left: -15px; }
+    .side-nav .collapsible .collapsible-header {
+      margin: 0; }
+  .side-nav .collection {
+    background-color: #d4d4d4; }
+    .side-nav .collection .collection-item {
+      height: auto;
+      max-width: 260px;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-right: 60px; }
+      .side-nav .collection .collection-item:not(.active):hover {
+        margin-right: -60px;
+        background-color: white; }
+        .side-nav .collection .collection-item:not(.active):hover span.badge {
+          visibility: hidden;
+          opacity: 0;
+          transition: visibility 0s 0.2s, opacity 0.2s linear; }
   .side-nav li {
-    float: none;
-    padding: 0 15px; }
+    float: none; }
     .side-nav li:hover, .side-nav li.active {
-      background-color: #ddd; }
+      margin-left: -15px;
+      padding-left: 15px;
+      background-color: white; }
   .side-nav a {
     color: #444;
     display: block;
     font-size: 1rem;
     height: 64px;
-    line-height: 64px;
-    padding: 0 15px; }
+    line-height: 64px; }
 
 .drag-target {
   height: 100%;
@@ -7518,7 +7535,6 @@ select {
 
 .side-nav.fixed a {
   display: block;
-  padding: 0 15px;
   color: #444; }
 
 .side-nav.fixed {
@@ -8716,9 +8732,6 @@ a.control_next, a.control_prev {
 
 .mcard {
   height: 100%; }
-  .mcard .learning .up-side .btn-flat,
-  .mcard .learning .down-side .btn-flat {
-    display: none; }
   .mcard .up-side,
   .mcard .down-side {
     margin-bottom: 40px; }

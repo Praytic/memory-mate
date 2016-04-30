@@ -155,25 +155,18 @@
   </div>
 </main>
 
-<!--Dropdowns-->
-<ul id='theme-settings' class='dropdown-content'>
-  <li><a href="#!">Rename Deck</a></li>
-  <li><a href="#!">Add Deck</a></li>
-  <li><a href="#!">Delete Deck</a></li>
-  <li class="divider"></li>
-  <li><a href="#!">Rename Theme</a></li>
-  <li><a href="#!">Delete Theme</a></li>
-</ul>
-
-<ul id="slide-out" class="side-nav fixed">
-  <li><a href="#!">First Sidebar Link</a></li>
-  <li><a href="#!">Second Sidebar Link</a></li>
-</ul>
+<!--Load Dropdowns-->
+<include>myNav</include>
+<div id="theme-settings-dropdown"></div>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="../libs/materialize-src/js/bin/materialize.js"></script>
 <script type="text/javascript" src="../js/components/icons.js"></script>
 <script>
+  $(document).ready(function() {
+    $('#side-nav-panel').load('components/side-nav-panel.html');
+    $('#theme-settings-dropdown').load('components/theme-settings-dropdown.html');
+  });
   $('.right-menu').sideNav({
       edge: 'left',
       closeOnClick: true
