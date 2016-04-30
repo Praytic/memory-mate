@@ -5621,7 +5621,7 @@ html {
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
-  color: #FFF; }
+  color: #fff; }
   @media only screen and (min-width: 0) {
     html {
       font-size: 14px; } }
@@ -8744,7 +8744,7 @@ a.control_next, a.control_prev {
 .simple-pagination-last a {
   width: 2rem;
   font-weight: 300;
-  color: #FFF; }
+  color: #fff; }
 
 a[class*="simple-pagination-navigation-disabled"] {
   color: gray;
@@ -8759,3 +8759,23 @@ a[class*="simple-pagination-navigation-disabled"] {
   text-align: center; }
   .my-navigation .my-pagination div, .my-navigation .my-pagination span, .my-navigation .my-pagination a {
     display: inline-block; }
+
+/* PROGRESS CIRCLE COMPONENT */
+.circliful {
+  margin: auto;
+  position: relative;
+  font-weight: 300; }
+
+.circle-text, .circle-info, .circle-text-half, .circle-info-half {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  display: inline-block; }
+
+.circle-info, .circle-info-half {
+  color: #999; }
+
+.circliful .fa {
+  margin: -10px 3px 0 3px;
+  position: relative;
+  bottom: 4px; }
