@@ -1562,7 +1562,7 @@
 .grey.darken-1 {
   background-color: #757575 !important; }
 
-.grey-text.text-darken-1, span.badge2 {
+.grey-text.text-darken-1 {
   color: #757575 !important; }
 
 .grey.darken-2 {
@@ -1641,6 +1641,7 @@
 /*** Collections ***/
 /*** Progress Bar ***/
 /*** Modal ***/
+/*** Paginator ***/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -2426,16 +2427,6 @@ span.badge {
     border-radius: 2px; }
   span.badge.new:after {
     content: " new"; }
-
-span.badge2 {
-  min-width: 3rem;
-  padding: 0 6px;
-  text-align: center;
-  font-size: 1rem;
-  line-height: inherit;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
 
 nav ul a span.badge {
   position: static;
@@ -8745,3 +8736,28 @@ a.control_next, a.control_prev {
   .mcard .down-side {
     position: relative;
     height: 50%; }
+
+.simple-pagination-page-numbers a,
+.simple-pagination-previous a,
+.simple-pagination-next a,
+.simple-pagination-first a,
+.simple-pagination-last a {
+  display: inline-block;
+  float: left;
+  width: 2rem;
+  text-align: center;
+  font-weight: 300;
+  color: #FFF;
+  border-radius: 2px;
+  margin: 0 10px; }
+
+.simple-pagination-previous a {
+  margin-right: 40px; }
+
+a[class*="simple-pagination-navigation-disabled"] {
+  color: gray;
+  cursor: default; }
+  a[class*="simple-pagination-navigation-disabled"].simple-pagination-navigation-page {
+    color: #212121;
+    background-color: #ffd454;
+    border-radius: 2px; }
