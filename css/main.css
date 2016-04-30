@@ -1642,6 +1642,7 @@
 /*** Progress Bar ***/
 /*** Modal ***/
 /*** Paginator ***/
+/*** Radial Progress Bar ***/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -8729,13 +8730,12 @@ a.control_next, a.control_prev {
 
 .mcard {
   height: 100%; }
-  .mcard.learning .up-side .btn-flat,
-  .mcard.learning .down-side .btn-flat {
+  .mcard .learning .up-side .btn-flat,
+  .mcard .learning .down-side .btn-flat {
     display: none; }
   .mcard .up-side,
   .mcard .down-side {
-    position: relative;
-    height: 50%; }
+    margin-top: 40px; }
 
 .simple-pagination-page-numbers a,
 .simple-pagination-previous a,
