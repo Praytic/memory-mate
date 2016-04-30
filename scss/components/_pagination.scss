@@ -4,20 +4,10 @@
 .simple-pagination-first,
 .simple-pagination-last {
   a {
-    display: inline-block;
-    float: left;
     width: 2rem;
-    text-align: center;
-
     font-weight: 300;
     color: $text-color;
-    border-radius: 2px;
-    margin: 0 10px;
   }
-}
-
-.simple-pagination-previous a {
-  margin-right: 40px;
 }
 
 a[class*="simple-pagination-navigation-disabled"] {
@@ -31,5 +21,13 @@ a[class*="simple-pagination-navigation-disabled"] {
   }
 }
 
-
+.my-navigation {
+  .my-pagination {
+    position:relative;
+    text-align:center;
+    div, span, a {
+      display:inline-block;
+    }
+  }
+}
 

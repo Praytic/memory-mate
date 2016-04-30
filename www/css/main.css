@@ -8742,17 +8742,9 @@ a.control_next, a.control_prev {
 .simple-pagination-next a,
 .simple-pagination-first a,
 .simple-pagination-last a {
-  display: inline-block;
-  float: left;
   width: 2rem;
-  text-align: center;
   font-weight: 300;
-  color: #FFF;
-  border-radius: 2px;
-  margin: 0 10px; }
-
-.simple-pagination-previous a {
-  margin-right: 40px; }
+  color: #FFF; }
 
 a[class*="simple-pagination-navigation-disabled"] {
   color: gray;
@@ -8761,3 +8753,9 @@ a[class*="simple-pagination-navigation-disabled"] {
     color: #212121;
     background-color: #ffd454;
     border-radius: 2px; }
+
+.my-navigation .my-pagination {
+  position: relative;
+  text-align: center; }
+  .my-navigation .my-pagination div, .my-navigation .my-pagination span, .my-navigation .my-pagination a {
+    display: inline-block; }
