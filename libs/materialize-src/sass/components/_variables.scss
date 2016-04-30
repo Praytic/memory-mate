@@ -51,10 +51,10 @@ $datepicker-selected: $secondary-color !default;
 $datepicker-selected-outfocus: desaturate(lighten($secondary-color, 35%), 15%) !default;
 
 /*** Dropdown ***/
-$dropdown-bg-color: #fff !default;
-$dropdown-hover-bg-color: $primary-color-dark !default;
-$dropdown-color: $secondary-color !default;
-$dropdown-item-height: 50px !default;
+$dropdown-bg-color: lighten($background-color, 50%) !default;
+$dropdown-hover-bg-color: lighten($secondary-color, 25%) !default;
+$dropdown-color: $text-color !default;
+$dropdown-item-height: 25px !default;
 
 /*** Fonts ***/
 $roboto-font-path: "../font/roboto/" !default;
@@ -110,8 +110,9 @@ $navbar-font-color: #fff !default;
 $navbar-brand-font-size: 1.6rem !default;
 
 /*** SideNav ***/
-$sidenav-bg-color: #fff !default;
+$sidenav-bg-color: lighten($background-color, 80%) !default;
 $sidenav-padding-right: 15px !default;
+$sidenav-color: #444 !default;
 
 /*** Photo Slider ***/
 $slider-bg-color: color('grey', 'base') !default;

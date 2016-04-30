@@ -9,7 +9,7 @@
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../../css/main.css" media="screen,projection"/>
 </head>
-<body>
+<body id="with-menu">
 
 <header>
   <div class="navbar-fixed navbar-first">
@@ -51,8 +51,20 @@
   </div>
 </main>
 
+<ul id="slide-out" class="side-nav fixed">
+  <li><a href="#!">First Sidebar Link</a></li>
+  <li><a href="#!">Second Sidebar Link</a></li>
+</ul>
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="../../libs/materialize-src/js/bin/materialize.js"></script>
 <script type="text/javascript" src="../../js/components/radial-progress-bar.js"></script>
+<script>
+  $('.right-menu').sideNav({
+      edge: 'left',
+      closeOnClick: true
+    }
+  );
+</script>
 </body>
 </html>
