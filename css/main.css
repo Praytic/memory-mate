@@ -8682,16 +8682,16 @@ footer.page-footer {
   padding-top: 0;
   margin-top: 0; }
 
-#with-menu header, #with-menu main, #with-menu footer {
+.with-menu header, .with-menu main, .with-menu footer {
   padding-left: 240px; }
 
-#with-menu nav {
+.with-menu nav {
   width: calc(100% - 240px); }
 
 @media only screen and (max-width: 992px) {
-  #with-menu header, #with-menu main, #with-menu footer {
+  .with-menu header, .with-menu main, .with-menu footer {
     padding-left: 0; }
-  #with-menu nav {
+  .with-menu nav {
     width: 100%; } }
 
 #slider {
