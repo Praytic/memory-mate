@@ -49,7 +49,7 @@
 
   &:hover {
     background-color: lighten($button-color, 15%);
-    @extend .z-depth-1-half;
+    @extend .z-depth-1;
   }
 }
 
@@ -81,7 +81,7 @@
   }
 
   &:hover {
-    @extend .z-depth-1-half;
+    @extend .z-depth-1;
   }
   &:before {
     border-radius: 0;
