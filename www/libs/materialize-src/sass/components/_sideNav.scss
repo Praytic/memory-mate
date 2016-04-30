@@ -33,7 +33,7 @@
     &:hover, &.active { background-color: #ddd; }
   }
   a {
-    color: #444;
+    color: $sidenav-color;
     display: block;
     font-size: 1rem;
     height: 64px;
@@ -105,7 +105,7 @@
 
   height: 120vh;
   background-color: rgba(0,0,0,.5);
-  z-index: 997;
+  z-index: 996;
 
   will-change: opacity;
 }

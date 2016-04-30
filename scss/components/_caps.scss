@@ -1,8 +1,10 @@
 // All needed caps
-span.badge.new {
-  right: 12%;
-  @media #{$large-and-up} {
-    right: 18%;
+.collapsible-header {
+  & span.badge.new {
+    position: relative;
+    display: inline-block;
+    float: right;
+    right: 0;
   }
 }
 
@@ -24,4 +26,8 @@ form {
     max-width: 400px;
     max-height: none;
   }
+}
+
+#second-nav {
+  z-index: 997;
 }

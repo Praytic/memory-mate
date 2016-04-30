@@ -9,7 +9,7 @@
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../../css/main.css" media="screen,projection" />
 </head>
-<body id="pagination">
+<body id="pagination, with-menu">
 
 <header>
   <div class="navbar-fixed">
@@ -26,16 +26,6 @@
 </header>
 
 <main>
-  <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
-    <a class="btn-floating btn-large waves-effect waves-ripple">
-      <i class="material-icons">menu</i>
-    </a>
-    <ul>
-      <li><a class="btn-floating waves-effect waves-ripple"><i class="material-icons">check</i></a></li>
-      <li><a class="btn-floating waves-effect waves-ripple"><i class="material-icons">close</i></a></li>
-      <li><a class="btn-floating waves-effect waves-ripple"><i class="material-icons">add</i></a></li>
-    </ul>
-  </div>
   <table class="mcard editable container">
     <tbody>
       <tr><td>
@@ -65,13 +55,18 @@
 
 <footer class="my-navigation page-footer valign-wrapper">
   <div class="my-pagination container valign">
-    <div class="simple-pagination-first"></div>
-    <div class="simple-pagination-previous"></div>
-    <div class="simple-pagination-page-numbers"></div>
-    <div class="simple-pagination-next"></div>
-    <div class="simple-pagination-last"></div>
+    <div class="simple-pagination-first waves-effect"></div>
+    <div class="simple-pagination-previous waves-effect"></div>
+    <div class="simple-pagination-page-numbers waves-effect"></div>
+    <div class="simple-pagination-next waves-effect"></div>
+    <div class="simple-pagination-last waves-effect"></div>
   </div>
 </footer>
+
+<ul id="slide-out" class="side-nav fixed">
+  <li><a href="#!">First Sidebar Link</a></li>
+  <li><a href="#!">Second Sidebar Link</a></li>
+</ul>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="../../libs/materialize-src/js/bin/materialize.js"></script>
@@ -88,6 +83,13 @@
       last_content: '>>'});
 
   })(jQuery);
+</script>
+<script>
+  $('.right-menu').sideNav({
+      edge: 'left',
+      closeOnClick: true
+    }
+  );
 </script>
 </body>
 </html>
