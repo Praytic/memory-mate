@@ -173,4 +173,16 @@ $modal-footer-bg-color: lighten($background-color, 15%);
 
 /*** Paginator ***/
 $paginator-color: #fff !default;
-$paginator-current-number: $primary-color-light
+$paginator-current-number: $primary-color-light;
+
+/*** Radial Progress Bar ***/
+$circle-size: 120px;
+$circle-background: darken($background-color, 50%);
+$circle-color: lighten($secondary-color, 30%);
+$inset-size: 110px;
+$inset-color: $background-color;
+$transition-length: 1s;
+$shadow: 0px 0px 0px rgba(0,0,0,0);
+$percentage-color: #97a71d;
+$percentage-font-size: 22px;
+$percentage-text-width: 57px;

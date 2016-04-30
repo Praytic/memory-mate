@@ -3,6 +3,8 @@ var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
+var less = require('gulp-less');
+var path = require('path');
 
 var paths = {
     sass: ['./scss/**/*.scss',
@@ -10,6 +12,13 @@ var paths = {
 };
 
 gulp.task('default', ['sass']);
+
+var lessToScss = require('gulp-less-to-scss');
+gulp.task('lessToScss',function(){
+  gulp.src('./scss/**/*.less')
+    .pipe(lessToScss())
+    .pipe(gulp.dest('themes/system/scss'));
+});
 
 gulp.task('sass', function(done) {
     gulp.src(['./scss/main.scss'])
@@ -25,5 +34,5 @@ gulp.task('sass', function(done) {
 });
 
 gulp.task('watch', function() {
-    gulp.watch(paths.sass, ['sass']);
+    gulp.watch(paths.sass, ['sass', 'less']);
 });

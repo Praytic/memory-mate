@@ -1,20 +1,15 @@
 ﻿.mcard {
   height: 100%;
-
-  &.learning {
+  .learning {
     .up-side .btn-flat,
     .down-side .btn-flat {
         display: none;
     }
   }
-
-  &.editable {
-
+  .editable {
   }
-
   .up-side,
   .down-side {
-    position: relative;
-    height: 50%;
+    margin-top: 40px;
   }
 }
