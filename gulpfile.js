@@ -12,13 +12,13 @@ var src = './app/';
 var dist = './www/';
 
 var paths = {
-  sass: src + ['styles/**/*.scss', 'libs/materialize-src/sass/**/*.scss'],
+  sass: src + ['libs/materialize-src/sass/**/*.scss', 'styles/**/*.scss'],
   jade: src + ['index.jade'],
   css: dist + 'css/',
   img: src +'img/',
   maincss: src + 'styles/main.scss',
   mainjs: dist + 'js/main.js',
-  js: ['./app/js/**/*.js', './app/libs/materialize-src/js/**/*.js']
+  js: ['./app/js/**/*.js']
 };
 
 gulp.task('templates', function () {
@@ -58,6 +58,11 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest(dist + 'js/'));
 });
 
-gulp.task('default', ['sass', 'templates', 'scripts', 'watch'], function () {
+gulp.task('move', function() {
+  gulp.src(src + 'libs/materialize-src/js/bin/materialize.js')
+    .pipe(gulp.dest(dist + 'js/'))
+})
+
+gulp.task('default', ['sass', 'templates', 'scripts', 'move', 'watch'], function () {
   browserSync({server: dist});
 });
