@@ -1,32 +1,28 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var sass = require('gulp-sass');
-var minifyCss = require('gulp-minify-css');
-var rename = require('gulp-rename');
-var browserSync = require('browser-sync');
-var jade = require('gulp-jade');
-
-var reload = browserSync.reload;
+var gulp          = require('gulp');
+var concat        = require('gulp-concat');
+var sass          = require('gulp-sass');
+var minifyCss     = require('gulp-minify-css');
+var rename        = require('gulp-rename');
+var browserSync   = require('browser-sync');
+var jade          = require('gulp-jade');
 
 var src = './app/';
 var dist = './www/';
+var reload = browserSync.reload;
 
 var paths = {
-  sass: src + ['libs/materialize-src/sass/**/*.scss', 'styles/**/*.scss'],
-  jade: src + ['index.jade'],
-  css: dist + 'css/',
-  img: src +'img/',
-  maincss: src + 'styles/main.scss',
-  mainjs: dist + 'js/main.js',
-  js: ['./app/js/**/*.js']
+  sass:         [src + 'libs/materialize-src/sass/**/*.scss', src + 'styles/**/*.scss'],
+  jade:         [src + 'pages/content/**/*.jade', src + 'pages/deck/**/*.jade', src + 'index.jade'],
+  css:          dist + 'css/',
+  img:          src +'img/',
+  maincss:      src + 'styles/main.scss',
+  mainjs:       dist + 'js/main.js',
+  js:           [src + 'js/**/*.js']
 };
 
 gulp.task('templates', function () {
-  var LOCALS = {};
   return gulp.src(paths.jade)
-    .pipe(jade({
-      locals: LOCALS
-    }))
+    .pipe(jade())
     .pipe(gulp.dest(dist))
 });
 
@@ -61,7 +57,7 @@ gulp.task('scripts', function() {
 gulp.task('move', function() {
   gulp.src(src + 'libs/materialize-src/js/bin/materialize.js')
     .pipe(gulp.dest(dist + 'js/'))
-})
+});
 
 gulp.task('default', ['sass', 'templates', 'scripts', 'move', 'watch'], function () {
   browserSync({server: dist});

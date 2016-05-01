@@ -1,0 +1,143 @@
+doctype
+html(lang="en", xmlns='http://www.w3.org/1999/xhtml')
+  head
+    include ../components/head
+  body.with-menu
+    header
+      .navbar-fixed
+        nav
+          .row
+            .hide-on-med-only.hide-on-large-only
+              .col.s8
+                ul
+                  li
+                    a.button-icon.hide-on-large-only.right-menu(href='#', data-activates='slide-out')
+                      i.material-icons menu
+                  li
+                    span.brand-logo.left.truncate Memory Mate
+              .col.s4.right
+                ul.icons.right
+                  li
+                    a.button-icon(href='search.html')
+                      i.material-icons search
+                  li
+                    a.button-icon(href='settings.html')
+                      i.material-icons more_vert
+            .hide-on-small-only.hide-on-large-only
+              .col.s5
+                ul
+                  li
+                    a.button-icon.hide-on-large-only.right-menu(href='#', data-activates='slide-out')
+                      i.material-icons menu
+                  li
+                    span.brand-logo.left.truncate Memory Mate
+              .col.s7.right
+                ul.icons.right
+                  li.icon
+                    a.button-icon.active(href='#home')
+                      i.material-icons home
+                  li.icon
+                    a.button-icon(href='#browse')
+                      i.material-icons language
+                  li.icon
+                    a.button-icon(href='#profile')
+                      i.material-icons person
+                  li
+                    a.button-icon(href='#search')
+                      i.material-icons search
+                  li
+                    a.button-icon(href='#settings')
+                      i.material-icons more_vert
+            .hide-on-med-and-down
+              .col.s4
+                span.brand-logo.left.truncate Memory Mate
+              .col.s8.right.hide-on-med-and-down(style='height: 100%')
+                ul.tabs.right
+                  li.tab
+                    a.btn-flat(href='#home') Home
+                  li.tab
+                    a.btn-flat(href='#browse') Browse
+                  li.tab
+                    a.btn-flat(href='#profile') Profile
+                  li.tab
+                    a.btn-flat(href='#search') Search
+                  li.tab
+                    a.btn-flat(href='#settings') Settings
+      #second-nav.navbar-fixed.hide-on-med-and-up
+        nav
+          ul.tabs
+            li.tab.col.s4
+              a.btn-flat.active(href='#home') Home
+            li.tab.col.s4
+              a.btn-flat(href='#browse') Browse
+            li.tab.col.s4
+              a.btn-flat(href='#profile') Profile
+    main
+      #home.container
+        .fixed-action-btn(style='bottom: 45px; right: 24px;')
+          a.waves-effect.waves-light.waves-ripple.btn-floating.btn-large(href='deck.html')
+            i.large.material-icons add
+        div
+          br
+          ul.collapsible.popout(data-collapsible='accordion')
+            li
+              .collapsible-header
+                a.dropdown-button(href='#', data-activates='theme-settings', data-beloworigin='true')
+                  i.material-icons more_vert
+                span First Theme
+                span.badge.new 5
+              .collapsible-body
+                .collection
+                  a.collection-item(href='deck.html') First Deck in First Theme
+                  a.collection-item(href='deck.html') Second Deck in First Theme
+                  a.collection-item(href='deck.html')
+                    span.badge.new 5
+                      Third Deck in First Theme
+            li
+              .collapsible-header
+                a.dropdown-button(href='#', data-activates='theme-settings', data-beloworigin='true')
+                  i.material-icons more_vert
+                span Second Theme
+              .collapsible-body
+                .collection
+                  a.collection-item(href='deck.html') First Deck in Second Theme
+                  a.collection-item(href='deck.html') Second Deck in Second Theme
+                  a.collection-item(href='deck.html') Third Deck in Second Theme
+            li
+              .collapsible-header
+                a.dropdown-button(href='#', data-activates='theme-settings', data-beloworigin='true')
+                  i.material-icons more_vert
+                span Third Theme
+                span.badge.new 43
+              .collapsible-body
+                .collection
+                  a.collection-item(href='deck.html')
+                    span.badge.new 10
+                      First Deck in Third Theme
+                  a.collection-item(href='deck.html')
+                    span.badge.new 33
+                      Second Deck in Third Theme
+                  a.collection-item(href='deck.html') Third Deck in Third Theme
+      #browse.container
+        Browse
+      .fixed-action-btn(style='bottom: 45px; right: 24px;')
+        a.waves-effect.waves-light.waves-ripple.btn-floating.btn-large(href='publication.html')
+          i.large.material-icons add
+      #profile.container
+        Profile
+      #settings.container
+        Settings
+      #search.container
+        Search
+    include ../components/side-nav-panel
+    include ../components/theme-settings-dropdown
+    include ../components/scripts
+    script.
+      $(document).ready(function () {
+        $('#side-nav-panel').load('components/side-nav-panel.html');
+        $('#theme-settings-dropdown').load('components/theme-settings-dropdown.html');
+      });
+      $('.right-menu').sideNav({
+        edge: 'left',
+        closeOnClick: true
+      });

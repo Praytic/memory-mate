@@ -1,0 +1,41 @@
+doctype html
+html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
+  head
+    include ../components/head
+  body.with-menu
+    header
+      .navbar-fixed.navbar-first
+        nav
+          ul
+            li
+              a.button-icon.hide-on-large-only.right-menu(href='#', data-activates='slide-out')
+                i.material-icons menu
+            li
+              a.button-icon(href='#browse')
+                i.material-icons keyboard_arrow_left
+          span.brand-logo.left.truncate Deck Name
+          ul.right.hide-on-med-and-down
+            li
+              a(href='search.html') Search
+            li
+              a(href='settings.html') Settings
+          ul.right.row.hide-on-large-only
+            li
+              a.button-icon(href='search.html')
+                i.material-icons search
+            li
+              a.button-icon(href='settings.html')
+                i.material-icons more_vert
+    main
+    ul#slide-out.side-nav.fixed
+      li
+        a(href='#!') First Sidebar Link
+      li
+        a(href='#!') Second Sidebar Link
+    include ../components/scripts
+    script.
+      $('.right-menu').sideNav({
+      edge: 'left',
+      closeOnClick: true
+      }
+      );

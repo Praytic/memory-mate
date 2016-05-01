@@ -1,0 +1,77 @@
+doctype html
+html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
+  head
+    include ../components/head
+  body#pagination.with-menu
+    header
+      .navbar-fixed
+        nav
+          .nav-wrapper
+            ul#nav-mobile
+              li
+                a.button-icon.hide-on-large-only.right-menu(href='#', data-activates='slide-out')
+                  i.material-icons menu
+              li
+                a(href='deck.html')
+                  i.material-icons keyboard_arrow_left
+              span.brand-logo.left.truncate Deck Name
+              li.right
+                a.button-icon(href='settings.html')
+                  i.material-icons more_vert
+    main
+      table.mcard.editable.container
+        tbody
+          tr
+            td
+              .up-side.center-align.row
+                h5 Question
+                ul
+                  li
+                    a.waves-effect.waves-light.waves-ripple.btn-flat(style='height: 30px; width: 150px; line-height: 30px;') Add text
+                  li
+                    a.waves-effect.waves-light.waves-ripple.btn-flat(style='height: 30px; width: 150px; line-height: 30px;') Add image
+                  li
+                    a.waves-effect.waves-light.waves-ripple.btn-flat(style='height: 30px; width: 150px; line-height: 30px;') Draw image
+              .down-side.center-align.row
+                h5 Answer
+                ul.valign
+                  li
+                    a.waves-effect.waves-light.waves-ripple.btn-flat(style='height: 30px; width: 150px; line-height: 30px;') Add text
+                  li
+                    a.waves-effect.waves-light.waves-ripple.btn-flat(style='height: 30px; width: 150px; line-height: 30px;') Add image
+                  li
+                    a.waves-effect.waves-light.waves-ripple.btn-flat(style='height: 30px; width: 150px; line-height: 30px;') Draw image
+          tr
+            td SLIDE2
+          tr
+            td SLIDE3
+          tr
+            td SLIDE4
+    footer.my-navigation.page-footer.valign-wrapper
+      .my-pagination.container.valign
+        .simple-pagination-first.waves-effect
+        .simple-pagination-previous.waves-effect
+        .simple-pagination-page-numbers.waves-effect
+        .simple-pagination-next.waves-effect
+        .simple-pagination-last.waves-effect
+    ul#slide-out.side-nav.fixed
+      li
+        a(href='#!') First Sidebar Link
+      li
+        a(href='#!') Second Sidebar Link
+    include ../components/scripts
+    script.
+      (function($){
+      $('#pagination').simplePagination({
+      items_per_page: 1,
+      number_of_visible_page_numbers: 5,
+      first_content: '<<',
+      previous_content: '<',
+      next_content: '>',
+      last_content: '>>'});
+      $('.right-menu').sideNav({
+      edge: 'left',
+      closeOnClick: true
+      }
+      );
+      })(jQuery);

@@ -1,0 +1,42 @@
+ul#slide-out.side-nav.fixed
+  h5 Library
+  ul.collapsible(data-collapsible='accordion')
+    li
+      .collapsible-header
+        span First Theme
+        span.badge 5
+      .collapsible-body
+        .collection
+          a.collection-item(href='deck/deck.html') First Deck in First Theme
+          a.collection-item(href='deck/deck.html') Second Deck in First Theme
+          a.collection-item(href='deck/deck.html')
+            span.badge 5
+             Third Deck in First Theme
+    li
+      .collapsible-header
+        span Second Theme
+      .collapsible-body
+        .collection
+          a.collection-item(href='deck/deck.html') First Deck in Second Theme
+          a.collection-item(href='deck/deck.html') Second Deck in Second Theme
+          a.collection-item(href='deck/deck.html') Third Deck in Second Theme
+    li
+      .collapsible-header
+        span Third Theme
+        span.badge 43
+      .collapsible-body
+        .collection
+          a.collection-item(href='deck/deck.html')
+            span.badge 10
+             First Deck in Third Theme
+          a.collection-item(href='deck/deck.html')
+            span.badge 33
+             Second Deck in Third Theme
+          a.collection-item(href='deck/deck.html') Third Deck in Third Theme
+  h5 Options
+  li
+    a(href='#!') FAQ
+  li
+    a(href='index.html') Sign Out
+  li
+    a(href='#!', onclick='window.close();') Exit

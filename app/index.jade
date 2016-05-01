@@ -1,1 +1,70 @@
-include pages/authorization.html
+doctype html
+html(lang="en", xmlns='http://www.w3.org/1999/xhtml')
+  head
+    include pages/components/head
+  body
+    main.valign-wrapper.row(style='margin: 20px auto')
+      form#login.modal.card
+        .card-content.modal-content
+          .row(style='min-width: 20rem')
+            span.card-title.center
+              h4 Memory Mate
+          .row
+            .input-field
+              input#login-email.validate(type='text')
+              label(for='login-email') Email
+          .row
+            .input-field
+              input#login-pass.validate(type='password')
+              label(for='login-pass') Password
+          .col.s12
+            p.right-align
+              a#forgot-pass-btn.btn-flat.modal-trigger(href='#forgot-pass') Restore pass
+          .row
+            .input-field
+              p
+                input#login-remember.filled-in(type='checkbox')
+                label(for='login-remember') Remember me
+          #login-row.row
+            .input-field
+              a.btn.waves-effect.waves-light.col.s12(href='home.html') Log in
+          .row
+            .col.s12
+              p.center-align
+                a.btn-flat.modal-trigger(href='#signup') Sign up
+      form#signup.modal.card.fix
+        .card-content.modal-content
+          .row(style='min-width: 20rem')
+            span.card-title.center
+              h4 Memory Mate
+          .row
+            .input-field
+              input#signup-name.validate(type='text')
+              label(for='signup-name') Name
+          .row
+            .input-field
+              input#signup-email.validate(type='text')
+              label(for='signup-email') Email
+          .row
+            .input-field
+              input#signup-pass.validate(type='password')
+              label(for='signup-pass') Password
+          #signup-row.row(style='padding: 20px')
+            .input-field
+              a#signup-btn.btn.waves-effect.modal-trigger.col.s12(href='#login') Sign Up
+      #forgot-pass.modal
+        .modal-content
+          h4 Restore password
+          p Write you registered email to restore the password
+          .row
+            .input-field
+              input#email-restore.validate(type='text')
+              label(for='email-restore') Email
+        .modal-footer.row
+          a#cancel.modal-action.waves-effect.btn-flat.modal-trigger(href='#login') Cancel
+          a#apply.modal-action.waves-effect.btn-flat.modal-trigger(href='#login') Apply
+    footer.page-footer.hide
+      .footer-copyright
+        .container © 2015 Copyright Text
+          a.custom-text.text-lighten-3.right(href='#') Link
+    include pages/components/scripts

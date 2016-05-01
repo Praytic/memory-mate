@@ -1,0 +1,110 @@
+doctype html
+html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
+  head
+    include ../components/head
+  body#pagination.with-menu
+    header
+      .navbar-fixed.navbar-first
+        nav
+          ul
+            li
+              a.button-icon.hide-on-large-only.right-menu(href='#', data-activates='slide-out')
+                i.material-icons menu
+            li
+              a.button-icon(href='../home.html')
+                i.material-icons keyboard_arrow_left
+          span.brand-logo.left.truncate Deck Name
+          ul.right.hide-on-med-and-down
+            li
+              a(href='../search.html') Search
+            li
+              a(href='../settings.html') Settings
+          ul.right.row.hide-on-large-only
+            li
+              a.button-icon(href='../search.html')
+                i.material-icons search
+            li
+              a.button-icon(href='../settings.html')
+                i.material-icons more_vert
+    main
+      table.mcard.editable.container
+        tbody
+          tr
+            td
+              .up-side.center-align.row
+                h5 Question
+              .down-side.center-align.row
+                h5 Answer
+          tr
+            td SLIDE2
+          tr
+            td SLIDE3
+          tr
+            td SLIDE4
+    footer.my-navigation.page-footer.valign-wrapper
+      .my-pagination.container.valign
+        .simple-pagination-first
+        .simple-pagination-previous
+        .simple-pagination-page-numbers
+        .simple-pagination-next
+        .simple-pagination-last
+    // Right-Side Navigation Panel
+    ul#slide-out.side-nav.fixed
+      h5 Library
+      ul.collapsible(data-collapsible='accordion')
+        li
+          .collapsible-header
+            span First Theme
+            span.badge 5
+          .collapsible-body
+            .collection
+              a.collection-item(href='deck/deck.html') First Deck in First Theme
+              a.collection-item(href='deck/deck.html') Second Deck in First Theme
+              a.collection-item(href='deck/deck.html')
+                span.badge 5
+                 Third Deck in First Theme
+        li
+          .collapsible-header
+            span Second Theme
+          .collapsible-body
+            .collection
+              a.collection-item(href='deck/deck.html') First Deck in Second Theme
+              a.collection-item(href='deck/deck.html') Second Deck in Second Theme
+              a.collection-item(href='deck/deck.html') Third Deck in Second Theme
+        li
+          .collapsible-header
+            span Third Theme
+            span.badge 43
+          .collapsible-body
+            .collection
+              a.collection-item(href='deck/deck.html')
+                span.badge 10
+                 First Deck in Third Theme
+              a.collection-item(href='deck/deck.html')
+                span.badge 33
+                 Second Deck in Third Theme
+              a.collection-item(href='deck/deck.html') Third Deck in Third Theme
+      h5 Options
+      li
+        a(href='#!') FAQ
+      li
+        a(href='index.html') Sign Out
+      li
+        a(href='#!', onclick='window.close();') Exit
+    include ../components/scripts
+    script.
+      (function($){
+      $('#pagination').simplePagination({
+      items_per_page: 1,
+      number_of_visible_page_numbers: 5,
+      first_content: '<<',
+      previous_content: '<',
+      next_content: '>',
+      last_content: '>>'});
+      })(jQuery);
+    script.
+      $('.right-menu').sideNav({
+      edge: 'left',
+      closeOnClick: true
+      }
+      );
