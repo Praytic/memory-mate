@@ -8,23 +8,23 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
         nav
           ul
             li
-              a.button-icon.hide-on-large-only.right-menu(href='#', data-activates='slide-out')
+              a.hide-on-large-only.right-menu(href='#', data-activates='slide-out')
                 i.material-icons menu
             li
-              a.button-icon(href='home.html')
+              a(href='home.html')
                 i.material-icons keyboard_arrow_left
           span.brand-logo.left.truncate Theme Name
           ul.right.hide-on-med-and-down
             li
-              a(href='search.html') Search
+              a.btn-flat(href='search.html') Search
             li
-              a(href='settings.html') Settings
+              a.btn-flat(href='settings.html') Settings
           ul.right.row.hide-on-large-only
             li
-              a.button-icon(href='search.html')
+              a(href='search.html')
                 i.material-icons search
             li
-              a.button-icon(href='settings.html')
+              a(href='settings.html')
                 i.material-icons more_vert
     main.valign-wrapper
       .fixed-action-btn.horizontal(style='bottom: 45px; right: 24px;')
@@ -81,7 +81,9 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
         a(href='index.html') Sign Out
       li
         a(href='#!', onclick='window.close();') Exit
+    include ../components/side-nav-panel
     include ../components/scripts
+    script(type='text/javascript', src='js/components/radial-progress-bar.js')
     script.
       $('.right-menu').sideNav({
       edge: 'left',

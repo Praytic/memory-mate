@@ -1,5 +1,4 @@
 var gulp          = require('gulp');
-var concat        = require('gulp-concat');
 var sass          = require('gulp-sass');
 var minifyCss     = require('gulp-minify-css');
 var rename        = require('gulp-rename');
@@ -17,7 +16,7 @@ var paths = {
   img:          src +'img/',
   maincss:      src + 'styles/main.scss',
   mainjs:       dist + 'js/main.js',
-  js:           [src + 'js/**/*.js']
+  js:           [src + 'js/**/*.js', src + 'libs/materialize-src/js/bin/materialize.js']
 };
 
 gulp.task('templates', function () {
@@ -43,22 +42,13 @@ gulp.task('sass', function (done) {
 gulp.task('watch', function () {
   gulp.watch(paths.sass, ['sass'], reload);
   gulp.watch(paths.jade, ['templates'], reload);
-  gulp.watch(paths.js, ['scripts']);
-});
-
-gulp.task('scripts', function() {
-  return gulp.src(paths.js)
-    .pipe(concat('main.js'))
-    .pipe(gulp.dest(dist + 'js/'))
-    .pipe(rename('main.js'))
-    .pipe(gulp.dest(dist + 'js/'));
 });
 
 gulp.task('move', function() {
-  gulp.src(src + 'libs/materialize-src/js/bin/materialize.js')
-    .pipe(gulp.dest(dist + 'js/'))
+  gulp.src(paths.js)
+    .pipe(gulp.dest(dist + 'js/'));
 });
 
-gulp.task('default', ['sass', 'templates', 'scripts', 'move', 'watch'], function () {
+gulp.task('default', ['sass', 'templates', 'move', 'watch'], function () {
   browserSync({server: dist});
 });

@@ -91,7 +91,9 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
         a(href='index.html') Sign Out
       li
         a(href='#!', onclick='window.close();') Exit
+    include ../components/side-nav-panel
     include ../components/scripts
+    script(type='text/javascript', src='js/components/pagination.js')
     script.
       (function($){
       $('#pagination').simplePagination({

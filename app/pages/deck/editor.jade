@@ -16,7 +16,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
                   i.material-icons keyboard_arrow_left
               span.brand-logo.left.truncate Deck Name
               li.right
-                a.button-icon(href='settings.html')
+                a(href='settings.html')
                   i.material-icons more_vert
     main
       table.mcard.editable.container
@@ -54,12 +54,9 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
         .simple-pagination-page-numbers.waves-effect
         .simple-pagination-next.waves-effect
         .simple-pagination-last.waves-effect
-    ul#slide-out.side-nav.fixed
-      li
-        a(href='#!') First Sidebar Link
-      li
-        a(href='#!') Second Sidebar Link
+    include ../components/side-nav-panel
     include ../components/scripts
+    script(type='text/javascript', src='js/components/pagination.js')
     script.
       (function($){
       $('#pagination').simplePagination({
