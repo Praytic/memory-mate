@@ -12,54 +12,18 @@
   z-index: 999;
   overflow-y: auto;
   color: $sidenav-color;
-  padding-left: 15px;
 
   @extend .z-depth-1;
   will-change: left;
-
   // Right Align
   &.right-aligned {
     will-change: right;
     right: -105%;
     left: auto;
   }
-
-  .collapsible {
-    margin-left: -15px;
-    .collapsible-header {
-      margin: 0;
-    }
-  }
-
-  .collection {
-    background-color: darken($sidenav-bg-color, 10%);
-
-    .collection-item {
-      height: auto;
-      max-width: 260px;
-      overflow: hidden;
-      white-space: nowrap;
-      margin-right: 60px;
-
-      &:not(.active) {
-        &:hover {
-          margin-right: -60px;
-          span.badge {
-            visibility: hidden;
-            opacity: 0;
-            transition: visibility 0s 0.2s, opacity 0.2s linear;
-          }
-          background-color: lighten($sidenav-bg-color, 10%);
-        }
-      }
-    }
-  }
-
   li {
     float: none;
     &:hover, &.active {
-      margin-left: -15px;
-      padding-left: 15px;
       background-color: lighten($sidenav-bg-color, 10%);
     }
   }
@@ -67,8 +31,14 @@
     color: $sidenav-color;
     display: block;
     font-size: 1rem;
-    height: 64px;
-    line-height: 64px;
+    height: 32px;
+    line-height: 32px;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    padding: 15px;
+  }
+  span:not(.badge) {
+    padding-left: 15px;
   }
 }
 

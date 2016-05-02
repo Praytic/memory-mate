@@ -67,3 +67,62 @@ form {
 #second-nav {
   z-index: 997;
 }
+#side-nav-library {
+  margin: 0;
+  padding: 0;
+  span {
+    &.badge {
+      position: absolute;
+      line-height: $sidenav-row-height;
+      margin-left: 0;
+    }
+  }
+  .collapsible {
+    .collapsible-header {
+      padding: 0;
+      min-height: 0;
+      height: $sidenav-row-height;
+      line-height: $sidenav-row-height;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin: 0 4rem 0 0;
+
+      &:hover, &.active {
+        margin-right: -4rem;
+        span.badge {
+          visibility: hidden;
+          opacity: 0;
+          transition: visibility 0s 0.2s, opacity 0.2s linear;
+        }
+        background-color: lighten($sidenav-bg-color, 10%);
+      }
+    }
+  }
+  .collection {
+    background-color: darken($sidenav-bg-color, 3%);
+
+    .collection-item {
+      height: $sidenav-row-height;
+      line-height: $sidenav-row-height;
+      padding: 0;
+      max-width: $sidenav-width;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-right: 4rem;
+
+      &:not(.active) {
+        &:hover {
+          margin-right: -4rem;
+          span.badge {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s 0.2s, opacity 0.2s linear;
+          }
+          background-color: lighten($sidenav-bg-color, 10%);
+        }
+      }
+    }
+  }
+}

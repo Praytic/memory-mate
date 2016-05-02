@@ -7495,43 +7495,25 @@ select {
   z-index: 999;
   overflow-y: auto;
   color: #444;
-  padding-left: 15px;
   will-change: left; }
   .side-nav.right-aligned {
     will-change: right;
     right: -105%;
     left: auto; }
-  .side-nav .collapsible {
-    margin-left: -15px; }
-    .side-nav .collapsible .collapsible-header {
-      margin: 0; }
-  .side-nav .collection {
-    background-color: #d4d4d4; }
-    .side-nav .collection .collection-item {
-      height: auto;
-      max-width: 260px;
-      overflow: hidden;
-      white-space: nowrap;
-      margin-right: 60px; }
-      .side-nav .collection .collection-item:not(.active):hover {
-        margin-right: -60px;
-        background-color: white; }
-        .side-nav .collection .collection-item:not(.active):hover span.badge {
-          visibility: hidden;
-          opacity: 0;
-          transition: visibility 0s 0.2s, opacity 0.2s linear; }
   .side-nav li {
     float: none; }
     .side-nav li:hover, .side-nav li.active {
-      margin-left: -15px;
-      padding-left: 15px;
       background-color: white; }
   .side-nav a {
     color: #444;
     display: block;
     font-size: 1rem;
-    height: 64px;
-    line-height: 64px; }
+    height: 32px;
+    line-height: 32px; }
+  .side-nav h1, .side-nav h2, .side-nav h3, .side-nav h4, .side-nav h5, .side-nav h6 {
+    padding: 15px; }
+  .side-nav span:not(.badge) {
+    padding-left: 15px; }
 
 .drag-target {
   height: 100%;
@@ -8835,3 +8817,45 @@ form#signup, form#login {
 
 #second-nav {
   z-index: 997; }
+
+#side-nav-library {
+  margin: 0;
+  padding: 0; }
+  #side-nav-library span.badge {
+    position: absolute;
+    line-height: 32px;
+    margin-left: 0; }
+  #side-nav-library .collapsible .collapsible-header {
+    padding: 0;
+    min-height: 0;
+    height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0 4rem 0 0; }
+    #side-nav-library .collapsible .collapsible-header:hover, #side-nav-library .collapsible .collapsible-header.active {
+      margin-right: -4rem;
+      background-color: white; }
+      #side-nav-library .collapsible .collapsible-header:hover span.badge, #side-nav-library .collapsible .collapsible-header.active span.badge {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s 0.2s, opacity 0.2s linear; }
+  #side-nav-library .collection {
+    background-color: #e5e5e5; }
+    #side-nav-library .collection .collection-item {
+      height: 32px;
+      line-height: 32px;
+      padding: 0;
+      max-width: 240px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-right: 4rem; }
+      #side-nav-library .collection .collection-item:not(.active):hover {
+        margin-right: -4rem;
+        background-color: white; }
+        #side-nav-library .collection .collection-item:not(.active):hover span.badge {
+          visibility: hidden;
+          opacity: 0;
+          transition: visibility 0s 0.2s, opacity 0.2s linear; }

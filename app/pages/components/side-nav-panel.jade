@@ -1,39 +1,57 @@
 ul#slide-out.side-nav.fixed
-  h5 Library
-  ul.collapsible(data-collapsible='accordion')
-    li
-      .collapsible-header
-        span First Theme
-        span.badge 5
-      .collapsible-body
-        .collection
-          a.collection-item(href='deck/deck.html') First Deck in First Theme
-          a.collection-item(href='deck/deck.html') Second Deck in First Theme
-          a.collection-item(href='deck/deck.html') Third Deck in First Theme
-            span.badge 5
-    li
-      .collapsible-header
-        span Second Theme
-      .collapsible-body
-        .collection
-          a.collection-item(href='deck/deck.html') First Deck in Second Theme
-          a.collection-item(href='deck/deck.html') Second Deck in Second Theme
-          a.collection-item(href='deck/deck.html') Third Deck in Second Theme
-    li
-      .collapsible-header
-        span Third Theme
-        span.badge 43
-      .collapsible-body
-        .collection
-          a.collection-item(href='deck/deck.html') First Deck in Third Theme
-            span.badge 10
-          a.collection-item(href='deck/deck.html') Second Deck in Third Theme
-            span.badge 33
-          a.collection-item(href='deck/deck.html') Third Deck in Third Theme
-  h5 Options
-  li
-    a(href='#!') FAQ
-  li
-    a(href='index.html') Sign Out
-  li
-    a(href='#!' ) Exit
+  #side-nav-options-primary.hide-on-med-only
+    ul
+      li
+        a(href='search.html') Search
+      li
+        a(href='settings.html') Settings
+  #side-nav-library
+    h5 Library
+    ul.collapsible(data-collapsible='accordion')
+      li
+        .collapsible-header
+          span First Theme
+          span.badge 5
+        .collapsible-body
+          .collection
+            a.collection-item(href='deck.html')
+              span First Deck in First Theme
+            a.collection-item(href='deck.html')
+              span Second Deck in First Theme
+            a.collection-item(href='deck.html')
+              span Third Deck in First Theme
+              span.badge 5
+      li
+        .collapsible-header
+          span Second Theme
+        .collapsible-body
+          .collection
+            a.collection-item(href='deck.html')
+              span First Deck in Second Theme
+            a.collection-item(href='deck.html')
+              span Second Deck in Second Theme
+            a.collection-item(href='deck.html')
+              span Third Deck in Second Theme
+      li
+        .collapsible-header
+          span Third Theme
+          span.badge 43
+        .collapsible-body
+          .collection
+            a.collection-item(href='deck.html')
+              span First Deck in Third Theme
+              span.badge 10
+            a.collection-item(href='deck.html')
+              span Second Deck in Third Theme
+              span.badge 33
+            a.collection-item(href='deck.html')
+              span Third Deck in Third Theme
+  #side-nav-options-secondary
+    h5 Options
+    ul
+      li
+        a(href='#!') FAQ
+      li
+        a(href='index.html') Sign Out
+      li
+        a(href='#!' ) Exit

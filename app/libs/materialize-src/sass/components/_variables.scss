@@ -112,6 +112,8 @@ $navbar-brand-font-size: 1.6rem !default;
 /*** SideNav ***/
 $sidenav-bg-color: lighten($background-color, 80%) !default;
 $sidenav-color: #444 !default;
+$sidenav-width: 240px;
+$sidenav-row-height: 32px;
 
 /*** Photo Slider ***/
 $slider-bg-color: color('grey', 'base') !default;
