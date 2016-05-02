@@ -8817,7 +8817,7 @@ form#signup, form#login {
       width: 192px; } }
   @media only screen and (min-width: 993px) {
     #first-nav nav .nav-third-part {
-      width: calc(384px - 64px); } }
+      width: calc(384px); } }
 
 #first-nav nav .nav-fourth-part {
   float: right;
@@ -8825,7 +8825,7 @@ form#signup, form#login {
   height: 100%; }
   @media only screen and (min-width: 993px) {
     #first-nav nav .nav-fourth-part {
-      width: calc(256px - 64px); } }
+      width: calc(256px); } }
 
 #second-nav {
   z-index: 997; }
@@ -8890,8 +8890,8 @@ body.home-page #first-nav .nav-second-part {
       width: -moz-calc(100% - 64px * 6); } }
   @media only screen and (min-width: 993px) {
     body.home-page #first-nav .nav-second-part {
-      width: calc(100% - 128px * 5 + 64px);
-      width: -moz-calc(100% - 128px * 5 + 64px); } }
+      width: calc(100% - 128px * 5);
+      width: -moz-calc(100% - 128px * 5); } }
 
 body.home-page #first-nav a[href="home.html"] {
   display: none; }
