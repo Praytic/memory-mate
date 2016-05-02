@@ -8799,5 +8799,37 @@ form#signup, form#login {
   max-width: 400px;
   max-height: none; }
 
+#first-nav .col:nth-child(1) {
+  float: left;
+  width: 128px; }
+  @media only screen and (min-width: 993px) {
+    #first-nav .col:nth-child(1) {
+      width: 64px; } }
+
+#first-nav .col:nth-child(2) {
+  float: left;
+  width: calc(100% - 64px * 4);
+  width: -moz-calc(100% - 64px * 4); }
+  #first-nav .col:nth-child(2) p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%; }
+  @media only screen and (max-width: 600px) {
+    #first-nav .col:nth-child(2) {
+      width: calc(100% - 64px * 2);
+      width: -moz-calc(100% - 64px * 2); } }
+  @media only screen and (min-width: 993px) {
+    #first-nav .col:nth-child(2) {
+      width: calc(100% - 64px * 2);
+      width: -moz-calc(100% - 64px * 2); } }
+
+#first-nav .col:nth-child(3) {
+  float: right;
+  width: 128px; }
+  @media only screen and (min-width: 993px) {
+    #first-nav .col:nth-child(3) {
+      width: 64px; } }
+
 #second-nav {
   z-index: 997; }
