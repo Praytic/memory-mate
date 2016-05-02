@@ -5,6 +5,7 @@ var rename        = require('gulp-rename');
 var browserSync   = require('browser-sync');
 var jade          = require('gulp-jade');
 var clean         = require('gulp-clean');
+var runSequence   = require('run-sequence');
 
 var src = './app/';
 var dist = './www/';
@@ -18,10 +19,10 @@ var paths = {
   maincss:      src + 'styles/main.scss',
   mainjs:       dist + 'js/main.js',
   js:           [src + 'js/**/*.js', src + 'libs/materialize-src/js/bin/materialize.js'],
-  clean:        [dist + 'pages/components']
+  clean:        [dist + 'pages/**/*.html', dist + 'pages']
 };
 
-gulp.task('clean-up', ['templates'], function () {
+gulp.task('clean-up', function () {
   return gulp.src(paths.clean, {read: false})
     .pipe(clean());
 });
@@ -31,8 +32,6 @@ gulp.task('templates', function () {
     .pipe(jade())
     .pipe(gulp.dest(dist))
 });
-
-gulp.task('jade', ['templates', 'clean-up']);
 
 gulp.task('sass', function (done) {
   gulp.src([paths.maincss])
@@ -53,11 +52,18 @@ gulp.task('watch', function () {
   gulp.watch(paths.jade, ['jade'], reload);
 });
 
-gulp.task('move', function() {
+gulp.task('move', function(callback) {
   gulp.src(paths.js)
     .pipe(gulp.dest(dist + 'js/'));
+  gulp.src([dist + 'pages/content/**/*.html', dist + 'pages/deck/**/*.html'])
+    .pipe(gulp.dest(dist));
+  callback();
 });
 
-gulp.task('default', ['sass', 'jade', 'move', 'watch'], function () {
+gulp.task('jade', function(callback) {
+  runSequence('templates', 'move', 'clean-up', callback);
+});
+
+gulp.task('default', ['sass', 'jade', 'watch'], function () {
   browserSync({server: dist});
 });

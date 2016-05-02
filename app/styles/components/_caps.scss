@@ -30,6 +30,7 @@ form {
 
 #first-nav {
   $icon-size: 64px;
+  height: 100%;
 
   .col:nth-child(1) {
     float: left;
@@ -41,12 +42,6 @@ form {
 
   .col:nth-child(2) {
     float: left;
-    p {
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-      width: 100%;
-    }
     width: calc(100% - #{$icon-size} * 4);
     width: -moz-calc(100% - #{$icon-size} * 4);
 

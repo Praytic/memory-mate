@@ -46,6 +46,10 @@ nav {
     font-size: $navbar-brand-font-size;
     padding: 0;
     white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
 
     &.center {
       left: 50%;
@@ -61,15 +65,20 @@ nav {
         @include transform(none);
       }
 
-      &.left { left: 0.5rem; }
+      &.left {
+        left: 0.5rem;
+        width: calc(100% - 0.5rem);
+      }
       &.right {
         right: 0.5rem;
+        width: calc(100% - 0.5rem);
         left: auto;
       }
     }
 
     &.right {
       right: 0.5rem;
+      width: calc(100% - 0.5rem);
       padding: 0;
     }
   }
