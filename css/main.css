@@ -7493,7 +7493,6 @@ select {
   padding-bottom: 60px;
   background-color: #ededed;
   z-index: 999;
-  overflow-y: auto;
   color: #444;
   will-change: left; }
   .side-nav.right-aligned {
@@ -7509,7 +7508,8 @@ select {
     display: block;
     font-size: 1rem;
     height: 32px;
-    line-height: 32px; }
+    line-height: 32px;
+    padding-left: 15px; }
   .side-nav h1, .side-nav h2, .side-nav h3, .side-nav h4, .side-nav h5, .side-nav h6 {
     padding: 15px; }
   .side-nav span:not(.badge) {
@@ -8788,32 +8788,39 @@ form#signup, form#login {
   max-width: 400px;
   max-height: none; }
 
-#first-nav {
+#first-nav nav .nav-first-part {
+  float: left;
+  width: 128px;
   height: 100%; }
-  #first-nav .col:nth-child(1) {
-    float: left;
-    width: 128px; }
-    @media only screen and (min-width: 993px) {
-      #first-nav .col:nth-child(1) {
-        width: 64px; } }
-  #first-nav .col:nth-child(2) {
-    float: left;
-    width: calc(100% - 64px * 4);
-    width: -moz-calc(100% - 64px * 4); }
-    @media only screen and (max-width: 600px) {
-      #first-nav .col:nth-child(2) {
-        width: calc(100% - 64px * 2);
-        width: -moz-calc(100% - 64px * 2); } }
-    @media only screen and (min-width: 993px) {
-      #first-nav .col:nth-child(2) {
-        width: calc(100% - 64px * 2);
-        width: -moz-calc(100% - 64px * 2); } }
-  #first-nav .col:nth-child(3) {
-    float: right;
-    width: 128px; }
-    @media only screen and (min-width: 993px) {
-      #first-nav .col:nth-child(3) {
-        width: 64px; } }
+  @media only screen and (min-width: 993px) {
+    #first-nav nav .nav-first-part {
+      width: 64px; } }
+
+#first-nav nav .nav-second-part {
+  float: left;
+  width: calc(100% - 64px * 4);
+  width: -moz-calc(100% - 64px * 4); }
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+    #first-nav nav .nav-second-part {
+      width: calc(100% - 64px * 7);
+      width: -moz-calc(100% - 64px * 7); } }
+  @media only screen and (min-width: 993px) {
+    #first-nav nav .nav-second-part {
+      width: calc(100% - 128px * 5);
+      width: -moz-calc(100% - 128px * 5); } }
+
+#first-nav nav .nav-third-part {
+  float: right;
+  width: 128px;
+  height: 100%; }
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+    #first-nav nav .nav-third-part {
+      width: 320px; } }
+  @media only screen and (min-width: 993px) {
+    #first-nav nav .nav-third-part {
+      width: calc(640px - 64px); } }
+  #first-nav nav .nav-third-part .tab {
+    float: right; }
 
 #second-nav {
   z-index: 997; }
@@ -8835,7 +8842,7 @@ form#signup, form#login {
     text-overflow: ellipsis;
     margin: 0 4rem 0 0; }
     #side-nav-library .collapsible .collapsible-header:hover, #side-nav-library .collapsible .collapsible-header.active {
-      margin-right: -4rem;
+      margin-right: 0;
       background-color: white; }
       #side-nav-library .collapsible .collapsible-header:hover span.badge, #side-nav-library .collapsible .collapsible-header.active span.badge {
         visibility: hidden;
