@@ -15,7 +15,7 @@ var paths = {
   sass:         [src + 'libs/materialize-src/sass/**/*.scss', src + 'styles/**/*.scss'],
   jade:         [src + 'pages/content/**/*.jade', src + 'pages/deck/**/*.jade', src + 'pages/components/**/*.jade', src + 'index.jade'],
   css:          dist + 'css/',
-  img:          src +'img/',
+  img:          src +'img/**/*.png',
   maincss:      src + 'styles/main.scss',
   mainjs:       dist + 'js/main.js',
   js:           [src + 'js/**/*.js', src + 'libs/materialize-src/js/bin/materialize.js'],
@@ -52,12 +52,13 @@ gulp.task('watch', function () {
   gulp.watch(paths.jade, ['jade'], reload);
 });
 
-gulp.task('move', function(callback) {
+gulp.task('move', function() {
+  gulp.src(paths.img)
+    .pipe(gulp.dest(dist + 'img/'));
   gulp.src(paths.js)
     .pipe(gulp.dest(dist + 'js/'));
-  gulp.src([dist + 'pages/content/**/*.html', dist + 'pages/deck/**/*.html'])
+  return gulp.src([dist + 'pages/content/**/*.html', dist + 'pages/deck/**/*.html'])
     .pipe(gulp.dest(dist));
-  callback();
 });
 
 gulp.task('jade', function(callback) {

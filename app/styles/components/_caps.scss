@@ -29,37 +29,51 @@ form {
 }
 
 #first-nav {
-  $icon-size: 64px;
-  height: 100%;
-
-  .col:nth-child(1) {
-    float: left;
-    width: $icon-size * 2;
-    @media #{$large-and-up} {
-      width: $icon-size;
+  nav {
+    $icon-size: $navbar-height-mobile;
+    @media #{$medium-and-up} {
+      $icon-size: $navbar-height;
     }
-  }
+    $word-size: $icon-size * 2;
 
-  .col:nth-child(2) {
-    float: left;
-    width: calc(100% - #{$icon-size} * 4);
-    width: -moz-calc(100% - #{$icon-size} * 4);
-
-    @media #{$small-and-down} {
-      width: calc(100% - #{$icon-size} * 2);
-      width: -moz-calc(100% - #{$icon-size} * 2);
+    .nav-first-part {
+      float: left;
+      width: $icon-size * 2;
+      height: 100%;
+      @media #{$large-and-up} {
+        width: $icon-size;
+      }
     }
-    @media #{$large-and-up} {
-      width: calc(100% - #{$icon-size} * 2);
-      width: -moz-calc(100% - #{$icon-size} * 2);
-    }
-  }
 
-  .col:nth-child(3) {
-    float: right;
-    width: $icon-size * 2;
-    @media #{$large-and-up} {
-      width: $icon-size;
+    .nav-second-part {
+      float: left;
+      width: calc(100% - #{$icon-size} * 4);
+      width: -moz-calc(100% - #{$icon-size} * 4);
+
+      @media #{$medium-only} {
+        width: calc(100% - #{$icon-size} * 7);
+        width: -moz-calc(100% - #{$icon-size} * 7);
+      }
+
+      @media #{$large-and-up} {
+        width: calc(100% - #{$word-size} * 5);
+        width: -moz-calc(100% - #{$word-size} * 5);
+      }
+    }
+
+    .nav-third-part {
+      float: right;
+      width: $icon-size * 2;
+      height: 100%;
+      @media #{$medium-only} {
+        width: $icon-size * 5;
+      }
+      @media #{$large-and-up} {
+        width: calc(#{$word-size * 5} - #{$icon-size});
+      }
+      .tab {
+        float: right;
+      }
     }
   }
 }
@@ -67,6 +81,7 @@ form {
 #second-nav {
   z-index: 997;
 }
+
 #side-nav-library {
   margin: 0;
   padding: 0;
@@ -89,7 +104,7 @@ form {
       margin: 0 4rem 0 0;
 
       &:hover, &.active {
-        margin-right: -4rem;
+        margin-right: 0;
         span.badge {
           visibility: hidden;
           opacity: 0;
@@ -123,6 +138,14 @@ form {
           background-color: lighten($sidenav-bg-color, 10%);
         }
       }
+    }
+  }
+}
+
+.home-page {
+  #first-nav {
+    a[href="#profile"], a[href="#home"], a[href="#browse"] {
+      //display: none;
     }
   }
 }

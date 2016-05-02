@@ -5,19 +5,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
   body#pagination.with-menu
     header
       .navbar-fixed
-        nav
-          .nav-wrapper
-            ul#nav-mobile
-              li
-                a.hide-on-large-only.right-menu(href='#', data-activates='slide-out')
-                  i.material-icons menu
-              li
-                a(href='deck.html')
-                  i.material-icons keyboard_arrow_left
-              span.brand-logo.left.truncate Deck Name
-              li.right
-                a(href='settings.html')
-                  i.material-icons more_vert
+        include ../components/nav-single
     main
       table.mcard.editable.container
         tbody
@@ -54,7 +42,6 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
         .simple-pagination-page-numbers.waves-effect
         .simple-pagination-next.waves-effect
         .simple-pagination-last.waves-effect
-    include ../components/side-nav-panel
     include ../components/scripts
     script(type='text/javascript', src='js/components/pagination.js')
     script.

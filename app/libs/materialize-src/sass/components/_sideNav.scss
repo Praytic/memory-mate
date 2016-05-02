@@ -10,7 +10,6 @@
   padding-bottom: 60px;
   background-color: $sidenav-bg-color;
   z-index: 999;
-  overflow-y: auto;
   color: $sidenav-color;
 
   @extend .z-depth-1;
@@ -33,6 +32,7 @@
     font-size: 1rem;
     height: 32px;
     line-height: 32px;
+    padding-left: 15px;
   }
   h1, h2, h3, h4, h5, h6 {
     padding: 15px;

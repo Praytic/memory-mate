@@ -2,76 +2,9 @@ doctype
 html(lang="en", xmlns='http://www.w3.org/1999/xhtml')
   head
     include ../components/head
-  body.with-menu
+  body.with-menu.home-page
     header
-      .navbar-fixed
-        nav
-          .row
-            .hide-on-med-only.hide-on-large-only
-              .col.s8
-                ul
-                  li
-                    a.hide-on-large-only.right-menu(href='#', data-activates='slide-out')
-                      i.material-icons menu
-                  li
-                    span.brand-logo.left.truncate Memory Mate
-              .col.s4.right
-                ul.icons.right
-                  li
-                    a(href='search.html')
-                      i.material-icons search
-                  li
-                    a(href='settings.html')
-                      i.material-icons more_vert
-            .hide-on-small-only.hide-on-large-only
-              .col.s5
-                ul
-                  li
-                    a.hide-on-large-only.right-menu(href='#', data-activates='slide-out')
-                      i.material-icons menu
-                  li
-                    span.brand-logo.left.truncate Memory Mate
-              .col.s7.right
-                ul.icons.right
-                  li.icon
-                    a.active(href='#home')
-                      i.material-icons home
-                  li.icon
-                    a(href='#browse')
-                      i.material-icons language
-                  li.icon
-                    a(href='#profile')
-                      i.material-icons person
-                  li
-                    a(href='#search')
-                      i.material-icons search
-                  li
-                    a(href='#settings')
-                      i.material-icons more_vert
-            .hide-on-med-and-down
-              .col.s4
-                span.brand-logo.left.truncate Memory Mate
-              .col.s8.right.hide-on-med-and-down(style='height: 100%')
-                ul.tabs.right
-                  li.tab
-                    a.btn-flat(href='#home') Home
-                  li.tab
-                    a.btn-flat(href='#browse') Browse
-                  li.tab
-                    a.btn-flat(href='#profile') Profile
-                  li.tab
-                    a.btn-flat(href='#search') Search
-                  li.tab
-                    a.btn-flat(href='#settings') Settings
-      #second-nav.navbar-fixed.hide-on-med-and-up
-        nav
-          ul.tabs
-            li.tab.col.s4
-              a.btn-flat.active(href='#home') Home
-            li.tab.col.s4
-              a.btn-flat(href='#browse') Browse
-            li.tab.col.s4
-              a.btn-flat(href='#profile') Profile
+      include ../components/nav-double
     main
       #home.container
         .fixed-action-btn(style='bottom: 45px; right: 24px;')
@@ -122,7 +55,6 @@ html(lang="en", xmlns='http://www.w3.org/1999/xhtml')
       #profile.container Profile
       #settings.container Settings
       #search.container Search
-    include ../components/side-nav-panel
     include ../components/theme-settings-dropdown
     include ../components/scripts
     script.
@@ -130,7 +62,7 @@ html(lang="en", xmlns='http://www.w3.org/1999/xhtml')
         $('#side-nav-panel').load('components/side-nav-panel.html');
         $('#theme-settings-dropdown').load('components/theme-settings-dropdown.html');
       });
-      $('.right-menu').sideNav({
+      $('.left-menu').sideNav({
         edge: 'left',
         closeOnClick: true
       });
