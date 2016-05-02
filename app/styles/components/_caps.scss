@@ -63,16 +63,21 @@ form {
 
     .nav-third-part {
       float: right;
-      width: $icon-size * 2;
       height: 100%;
       @media #{$medium-only} {
-        width: $icon-size * 5;
+        width: $icon-size * 3;
       }
       @media #{$large-and-up} {
-        width: calc(#{$word-size * 5} - #{$icon-size});
+        width: calc(#{$word-size * 3} - #{$icon-size});
       }
-      .tab {
-        float: right;
+    }
+
+    .nav-fourth-part {
+      float: right;
+      width: $icon-size * 2;
+      height: 100%;
+      @media #{$large-and-up} {
+        width: calc(#{$word-size * 2} - #{$icon-size});
       }
     }
   }
@@ -142,10 +147,41 @@ form {
   }
 }
 
-.home-page {
+body:not(.home-page) {
   #first-nav {
-    a[href="#profile"], a[href="#home"], a[href="#browse"] {
-      //display: none;
+    .nav-third-part {
+      display: none;
+    }
+  }
+}
+
+body.home-page {
+  #first-nav {
+    $icon-size: $navbar-height-mobile;
+    @media #{$medium-and-up} {
+      $icon-size: $navbar-height;
+    }
+    $word-size: $icon-size * 2;
+    .nav-first-part {
+      width: $icon-size;
+      @media #{$large-and-up} {
+        display: none;
+      }
+    }
+    .nav-second-part {
+      width: calc(100% - #{$icon-size} * 3);
+      width: -moz-calc(100% - #{$icon-size} * 3);
+      @media #{$medium-only} {
+        width: calc(100% - #{$icon-size} * 6);
+        width: -moz-calc(100% - #{$icon-size} * 6);
+      }
+      @media #{$large-and-up} {
+        width: calc(100% - #{$word-size} * 5 + #{$icon-size});
+        width: -moz-calc(100% - #{$word-size} * 5 + #{$icon-size});
+      }
+    }
+    a[href="home.html"] {
+      display: none;
     }
   }
 }

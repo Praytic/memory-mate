@@ -9,26 +9,34 @@
           a(href='home.html')
             i.material-icons keyboard_arrow_left
     .nav-second-part.col
-      p.brand-logo.left Deck Name
-    .nav-third-part.col.hide-on-large-only
-      ul.right
+      p.brand-logo.left Memory Mate
+    .nav-fourth-part.col.hide-on-large-only.right
+      ul
         li
-          a.hide-on-small-only.hide-on-large-only(href='#home')
-            i.material-icons home
-        li
-          a.hide-on-small-only.hide-on-large-only(href='#browse')
-            i.material-icons language
-        li
-          a.hide-on-small-only.hide-on-large-only(href='#profile')
-            i.material-icons person
-        li
-          a(href='#search')
+          a(href='search.html')
             i.material-icons search
         li
-          a(href='#settings')
+          a(href='settings.html')
             i.material-icons more_vert
-    .nav-third-part.col.hide-on-med-and-down
+    .nav-fourth-part.col.hide-on-med-and-down.right
       ul
+        li
+          a.btn-flat(href='search.html') Search
+        li.tab
+          a.btn-flat(href='settings.html') Settings
+    .nav-third-part.col.hide-on-large-only
+      ul.tabs.hide-on-small-only.hide-on-large-only
+        li.tab.btn-icon
+          a(href='#home')
+            i.material-icons home
+        li.tab.btn-icon
+          a(href='#browse')
+            i.material-icons language
+        li.tab.btn-icon
+          a(href='#profile')
+            i.material-icons person
+    .nav-third-part.col.hide-on-med-and-down
+      ul.tabs
         li.tab
           a.btn-flat.active(href='#home') Home
         li.tab
@@ -36,7 +44,4 @@
         li.tab
           a.btn-flat(href='#profile') Profile
         li.tab
-          a.btn-flat(href='#search') Search
-        li.tab
-          a.btn-flat(href='#settings') Settings
 include ../components/side-nav-panel

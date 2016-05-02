@@ -37,16 +37,14 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
     script.
       (function($){
       $('#pagination').simplePagination({
-      items_per_page: 1,
-      number_of_visible_page_numbers: 5,
-      first_content: '<<',
-      previous_content: '<',
-      next_content: '>',
-      last_content: '>>'});
+        items_per_page: 1,
+        number_of_visible_page_numbers: 5,
+        first_content: '<<',
+        previous_content: '<',
+        next_content: '>',
+        last_content: '>>'});
       })(jQuery);
-    script.
-      $('.right-menu').sideNav({
-      edge: 'left',
-      closeOnClick: true
-      }
-      );
+      $('.left-menu').sideNav({
+        edge: 'left',
+        closeOnClick: false
+      });

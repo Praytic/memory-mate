@@ -7,7 +7,7 @@
   height: 100%;
   white-space: nowrap;
 
-  .tab {
+  .tab:not(.btn-icon) {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;

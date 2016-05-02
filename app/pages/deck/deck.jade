@@ -4,28 +4,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
     include ../components/head
   body.with-menu
     header
-      .navbar-fixed.navbar-first
-        nav
-          ul
-            li
-              a.hide-on-large-only.right-menu(href='#', data-activates='slide-out')
-                i.material-icons menu
-            li
-              a(href='home.html')
-                i.material-icons keyboard_arrow_left
-          span.brand-logo.left.truncate Theme Name
-          ul.right.hide-on-med-and-down
-            li
-              a.btn-flat(href='search.html') Search
-            li
-              a.btn-flat(href='settings.html') Settings
-          ul.right.row.hide-on-large-only
-            li
-              a(href='search.html')
-                i.material-icons search
-            li
-              a(href='settings.html')
-                i.material-icons more_vert
+      include ../components/nav-single
     main.valign-wrapper
       .fixed-action-btn.horizontal(style='bottom: 45px; right: 24px;')
         a.waves-effect.waves-light.waves-ripple.btn-floating.btn-large(href='editor.html')
@@ -85,7 +64,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
     include ../components/scripts
     script(type='text/javascript', src='js/components/radial-progress-bar.js')
     script.
-      $('.right-menu').sideNav({
+      $('.left-menu').sideNav({
       edge: 'left',
       closeOnClick: true
       }

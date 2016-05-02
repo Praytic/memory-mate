@@ -4,8 +4,7 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
     include ../components/head
   body#pagination.with-menu
     header
-      .navbar-fixed
-        include ../components/nav-single
+      include ../components/nav-single
     main
       table.mcard.editable.container
         tbody
@@ -45,17 +44,17 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
     include ../components/scripts
     script(type='text/javascript', src='js/components/pagination.js')
     script.
-      (function($){
-      $('#pagination').simplePagination({
-      items_per_page: 1,
-      number_of_visible_page_numbers: 5,
-      first_content: '<<',
-      previous_content: '<',
-      next_content: '>',
-      last_content: '>>'});
-      $('.right-menu').sideNav({
-      edge: 'left',
-      closeOnClick: true
-      }
-      );
+      (function ($) {
+        $('#pagination').simplePagination({
+          items_per_page: 1,
+          number_of_visible_page_numbers: 5,
+          first_content: '<<',
+          previous_content: '<',
+          next_content: '>',
+          last_content: '>>'
+        });
       })(jQuery);
+      $('.left-menu').sideNav({
+        edge: 'left',
+        closeOnClick: false
+      });

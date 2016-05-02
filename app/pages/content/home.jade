@@ -53,16 +53,10 @@ html(lang="en", xmlns='http://www.w3.org/1999/xhtml')
         a.waves-effect.waves-light.waves-ripple.btn-floating.btn-large(href='#')
           i.large.material-icons add
       #profile.container Profile
-      #settings.container Settings
-      #search.container Search
     include ../components/theme-settings-dropdown
     include ../components/scripts
     script.
-      $(document).ready(function () {
-        $('#side-nav-panel').load('components/side-nav-panel.html');
-        $('#theme-settings-dropdown').load('components/theme-settings-dropdown.html');
-      });
       $('.left-menu').sideNav({
         edge: 'left',
-        closeOnClick: true
+        closeOnClick: false
       });
