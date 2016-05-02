@@ -4,28 +4,8 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
     include ../components/head
   body#pagination.with-menu
     header
-      .navbar-fixed.navbar-first
-        nav
-          ul
-            li
-              a.button-icon.hide-on-large-only.right-menu(href='#', data-activates='slide-out')
-                i.material-icons menu
-            li
-              a.button-icon(href='../home.html')
-                i.material-icons keyboard_arrow_left
-          span.brand-logo.left.truncate Deck Name
-          ul.right.hide-on-med-and-down
-            li
-              a(href='../search.html') Search
-            li
-              a(href='../settings.html') Settings
-          ul.right.row.hide-on-large-only
-            li
-              a.button-icon(href='../search.html')
-                i.material-icons search
-            li
-              a.button-icon(href='../settings.html')
-                i.material-icons more_vert
+      .navbar-fixed
+        include ../components/navbar
     main
       table.mcard.editable.container
         tbody
@@ -33,8 +13,13 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
             td
               .up-side.center-align.row
                 h5 Question
+                .question
+                  p This is the question
               .down-side.center-align.row
-                h5 Answer
+                .answer.unknown
+                  a.btn Answer
+                  .answer-content
+                    p This is the right answer
           tr
             td SLIDE2
           tr
@@ -48,7 +33,6 @@ html(lang='en', xmlns='http://www.w3.org/1999/xhtml')
         .simple-pagination-page-numbers
         .simple-pagination-next
         .simple-pagination-last
-    // Right-Side Navigation Panel
     ul#slide-out.side-nav.fixed
       h5 Library
       ul.collapsible(data-collapsible='accordion')

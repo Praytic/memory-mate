@@ -28,6 +28,47 @@ form {
   }
 }
 
+#first-nav {
+  $icon-size: 64px;
+
+  .col:nth-child(1) {
+    float: left;
+    width: $icon-size * 2;
+    @media #{$large-and-up} {
+      width: $icon-size;
+    }
+  }
+
+  .col:nth-child(2) {
+    float: left;
+    p {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+    }
+    width: calc(100% - #{$icon-size} * 4);
+    width: -moz-calc(100% - #{$icon-size} * 4);
+
+    @media #{$small-and-down} {
+      width: calc(100% - #{$icon-size} * 2);
+      width: -moz-calc(100% - #{$icon-size} * 2);
+    }
+    @media #{$large-and-up} {
+      width: calc(100% - #{$icon-size} * 2);
+      width: -moz-calc(100% - #{$icon-size} * 2);
+    }
+  }
+
+  .col:nth-child(3) {
+    float: right;
+    width: $icon-size * 2;
+    @media #{$large-and-up} {
+      width: $icon-size;
+    }
+  }
+}
+
 #second-nav {
   z-index: 997;
 }
